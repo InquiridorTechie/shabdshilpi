@@ -36,7 +36,6 @@
       <h1 id="start-title" class="poster">
         <span class="poster-fill">KR$NA</span>
         <span class="poster-outline" aria-hidden="true">KR$NA</span>
-        <span class="poster-outline" aria-hidden="true">KR$NA</span>
       </h1>
       <p class="tagline">Facts, bars, aur thoda wordplay. Kitna jaante ho?</p>
 
@@ -49,6 +48,11 @@
       <div class="rules">
         <p><span class="hl">Pehli attempt counts.</span> Replays are practice.</p>
         <p>Har jawaab ke baad: ek line ka explanation, aur gaane ka link.</p>
+      </div>
+
+      <div class="name-field">
+        <label for="player-name">Naam? <span class="muted">(optional)</span></label>
+        <input id="player-name" type="text" maxlength="20" autocomplete="nickname" placeholder="Jaise: Aman" enterkeyhint="go">
       </div>
 
       <button id="btn-start" class="btn btn-primary" type="button">
@@ -102,7 +106,7 @@
 
     <!-- RESULT -->
     <section id="screen-result" class="screen" aria-labelledby="result-title">
-      <p class="kicker">KR$NA · Round 01</p>
+      <p class="kicker" id="result-kicker">KR$NA · Round 01</p>
       <div class="scoreboard">
         <div class="big-score"><span id="final-score">0</span><span class="of">/15</span></div>
         <h2 id="result-title" class="rank">Scene Mein Hai</h2>

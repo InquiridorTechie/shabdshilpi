@@ -7,7 +7,8 @@
   const $ = (id) => document.getElementById(id);
 
   // ---------- state ----------
-  let questions = [];
+  let pool = [];      // every question in questions.json (main + reserve)
+  let questions = []; // the 15 picked for this play
   let idx = 0;
   let score = 0;
   let results = []; // {id, choice, correct, ms, timedOut}
@@ -23,11 +24,14 @@
   const attemptsKey = `ss_${ROUND}_attempts`;
   const firstKey = `ss_${ROUND}_first`;
   let attempt = store.get(attemptsKey, 0) + 1;
+  const nameKey = "ss_player_name";
+  let playerName = store.get(nameKey, "");
+  const cleanName = (v) => v.replace(/[^\p{L}\p{N} ._'-]/gu, "").replace(/\s+/g, " ").trim().slice(0, 20);
 
   // ---------- logging to Google Sheet ----------
   function send(event, data = {}) {
     const row = {
-      ts: new Date().toISOString(), session, round: ROUND, attempt, event,
+      ts: new Date().toISOString(), session, round: ROUND, attempt, event, name: playerName,
       ...data,
       ua: navigator.userAgent.slice(0, 160),
     };
@@ -51,6 +55,30 @@
     window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
   }
 
+  // ---------- round building ----------
+  const shuffle = (arr) => {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  };
+  const LEVELS = [["easy", 5], ["medium", 7], ["hard", 3]];
+  const BARS_MIN = 4, BARS_MAX = 6;
+
+  // Pick 15 from the pool: 5 easy, 7 medium, 3 hard, easy to hard, shuffled inside each level,
+  // with 4-6 bar questions. Options are shuffled too (number-only options stay in order).
+  function buildRound() {
+    let picked = [];
+    for (let tries = 0; tries < 200; tries++) {
+      picked = LEVELS.flatMap(([lvl, n]) => shuffle(pool.filter((q) => q.level === lvl)).slice(0, n));
+      const bars = picked.filter((q) => q.kind === "bar").length;
+      if (bars >= BARS_MIN && bars <= BARS_MAX) break;
+    }
+    return picked.map((q) => {
+      const numeric = q.options.every((o) => /^\d+$/.test(o.text.trim()));
+      return { ...q, shown: numeric ? q.options.slice() : shuffle(q.options) };
+    });
+  }
+
   // ---------- start ----------
   function initStart() {
     const first = store.get(firstKey, null);
@@ -59,13 +87,19 @@
       note.hidden = false;
       note.textContent = `Practice run. Aapka pehla score (${first.score}/${first.total}) hi count hoga.`;
     }
+    const input = $("player-name");
+    input.value = playerName;
+    input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); startRound(); } });
     $("btn-start").addEventListener("click", startRound);
   }
 
   function startRound() {
+    playerName = cleanName($("player-name").value || "");
+    store.set(nameKey, playerName);
     idx = 0; score = 0; results = []; locked = false;
+    questions = buildRound();
     $("score-live").textContent = "0";
-    send("start");
+    send("start", { answers: questions.map((q) => q.id).join(" ") });
     show("screen-quiz");
     renderQuestion();
   }
@@ -96,12 +130,12 @@
     const box = $("q-options");
     box.className = "options" + (q.options.length === 2 ? " two" : "");
     box.innerHTML = "";
-    q.options.forEach((o) => {
+    q.shown.forEach((o, pos) => {
       const b = document.createElement("button");
       b.type = "button";
       b.className = "opt";
-      b.dataset.key = o.key;
-      b.innerHTML = `<span class="key">${o.key}</span><span class="txt">${md(o.text)}</span>`;
+      b.dataset.key = o.key; // the original key, so answers and the Sheet stay consistent
+      b.innerHTML = `<span class="key">${"ABCD"[pos]}</span><span class="txt">${md(o.text)}</span>`;
       b.addEventListener("click", () => answer(o.key));
       box.appendChild(b);
     });
@@ -161,10 +195,15 @@
     });
 
     const v = $("reveal-verdict");
-    const lines = correct
-      ? ["Bohot hard!", "Sick bro!", "Aag laga di! 🔥", "Kya baat hai!", "Ekdum fire!", "Tu toh OG nikla!", "Full scene samjha!", "Bars pakad liye!"]
-      : key === null ? ["Time up!"] : ["Arre nahi yaar", "Close tha!", "Agli baar pakka"];
-    v.textContent = lines[Math.floor(Math.random() * lines.length)];
+    // [without name, with name] — the name is used about half the time so it doesn't get repetitive
+    const RIGHT = [
+      ["Bohot hard!", "Bohot hard, {n}!"], ["Sick bro!", "Sick, {n}!"], ["Aag laga di! 🔥", "{n} ne aag laga di! 🔥"],
+      ["Kya baat hai!", "Kya baat hai, {n}!"], ["Ekdum fire!", "{n}, ekdum fire!"], ["Tu toh OG nikla!", "{n} toh OG nikla!"],
+      ["Full scene samjha!", "{n} ne full scene samjha!"], ["Bars pakad liye!", "{n} ne bars pakad liye!"],
+    ];
+    const WRONG = [["Arre nahi yaar", "Arre nahi {n}"], ["Close tha!", "Close tha, {n}!"], ["Agli baar pakka", "Agli baar pakka, {n}"]];
+    const pick = correct ? fromBag("right", RIGHT) : key === null ? ["Time up!", "Time up, {n}!"] : fromBag("wrong", WRONG);
+    v.textContent = playerName && Math.random() < 0.5 ? pick[1].replace("{n}", playerName) : pick[0];
     v.className = "verdict " + (correct ? "ok" : "no");
     $("reveal-expl").innerHTML = md(q.explanation);
 
@@ -180,6 +219,21 @@
     $("reveal").hidden = false;
     $("btn-next").focus({ preventScroll: true });
     $("reveal").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
+  }
+
+  // Shuffle bag: every line is used once before any line repeats, and never twice in a row.
+  const bags = {};
+  function fromBag(name, lines) {
+    let bag = bags[name];
+    if (!bag || !bag.items.length) {
+      const items = lines.map((_, i) => i);
+      for (let i = items.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [items[i], items[j]] = [items[j], items[i]]; }
+      if (bag && items.length > 1 && items[items.length - 1] === bag.last) items.unshift(items.pop());
+      bag = bags[name] = { items, last: bag ? bag.last : -1 };
+    }
+    const i = bag.items.pop();
+    bag.last = i;
+    return lines[i];
   }
 
   function next() {
@@ -208,6 +262,7 @@
       answers: results.map((r) => `${r.id}:${r.choice ?? "-"}${r.correct ? "+" : "x"}${Math.round(r.ms / 1000)}s`).join(" "),
     });
 
+    $("result-kicker").textContent = playerName ? `${playerName} · KR$NA Round 01` : "KR$NA · Round 01";
     $("final-score").textContent = score;
     document.querySelector(".big-score .of").textContent = "/" + n;
     const [title, sub] = rankFor(score, n);
@@ -243,6 +298,7 @@
     g.textAlign = "left"; g.textBaseline = "alphabetic";
     g.fillStyle = "#e8ff3c"; g.font = "64px 'Rozha One'"; g.fillText("शब्दशिल्पी", 80, 330);
     g.fillStyle = "#b9b3a6"; g.font = "34px Anton"; g.fillText("KR$NA · ROUND 01", 80, 390);
+    if (playerName) { g.fillStyle = "#f2ede2"; g.font = "56px Kalam"; g.fillText(`${playerName} ka score`, 80, 455); }
     // score
     g.font = "420px Anton"; g.fillStyle = "#ff4b2b"; g.fillText(String(score), 92, 860);
     g.fillStyle = "#e8ff3c"; g.fillText(String(score), 80, 848);
@@ -264,7 +320,7 @@
 
   async function share() {
     const n = questions.length;
-    const text = `Maine Shabdshilpi ka KR$NA round khela: ${score}/${n} (${rankFor(score, n)[0]}). Tum kitna jaante ho?`;
+    const text = `${playerName ? playerName + " here! " : ""}Maine Shabdshilpi ka KR$NA round khela: ${score}/${n} (${rankFor(score, n)[0]}). Tum kitna jaante ho?`;
     const url = location.href.split("#")[0];
     send("share_tap", { score });
     try {
@@ -317,8 +373,9 @@
       if (e.target.tagName === "TEXTAREA" || e.target.tagName === "INPUT") return;
       const k = e.key.toUpperCase();
       if (!locked && ["A", "B", "C", "D", "1", "2", "3", "4"].includes(k)) {
-        const key = /\d/.test(k) ? "ABCD"[+k - 1] : k;
-        if (questions[idx].options.some((o) => o.key === key)) answer(key);
+        const pos = /\d/.test(k) ? +k - 1 : "ABCD".indexOf(k);
+        const o = questions[idx].shown[pos];
+        if (o) answer(o.key);
       }
     });
   }
@@ -327,7 +384,7 @@
   fetch("questions.json", { cache: "no-store" })
     .then((r) => r.json())
     .then((data) => {
-      questions = data.questions.filter((q) => !q.reserve);
+      pool = data.questions;
       initStart();
       initForms();
     })

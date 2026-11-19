@@ -91,8 +91,7 @@ body {
 .poster { margin: 0; line-height: .82; display: grid; }
 .poster span { font-family: var(--f-display); font-size: clamp(88px, 27vw, 168px); font-weight: 400; letter-spacing: .01em; }
 .poster-fill { color: var(--paper); text-shadow: 6px 6px 0 var(--heat); }
-.poster-outline { color: transparent; -webkit-text-stroke: 1.5px rgba(242, 237, 226, .35); }
-.poster-outline:last-child { -webkit-text-stroke-color: rgba(242, 237, 226, .15); }
+.poster-outline { color: transparent; -webkit-text-stroke: 1.5px rgba(242, 237, 226, .18); margin-top: -.42em; }
 
 .tagline { font-family: var(--f-hand); font-size: 22px; margin: 14px 0 16px; color: var(--paper); }
 
@@ -104,6 +103,16 @@ body {
 
 .rules { border-left: 3px solid var(--hl); padding: 2px 0 2px 14px; margin-bottom: 24px; }
 .rules p { margin: 6px 0; }
+
+/* optional name */
+.name-field { display: grid; gap: 8px; margin: 0 0 18px; }
+.name-field label { font-weight: 700; font-size: 15px; }
+.name-field input {
+  font: inherit; font-size: 18px; padding: 13px 14px; border-radius: var(--r);
+  border: 2px solid var(--paper); background: var(--wall-2); color: var(--paper); min-height: 52px;
+}
+.name-field input::placeholder { color: var(--paper-dim); opacity: .7; }
+.name-field input:focus { outline: 3px solid var(--hl); outline-offset: 2px; }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -225,10 +234,10 @@ body {
 .big-score .of { font-size: .35em; color: var(--paper); text-shadow: none; }
 .rank { font-family: var(--f-display); text-transform: uppercase; font-weight: 400; font-size: 36px; margin: 6px 0 4px; letter-spacing: .03em; }
 
-.stamp-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 0 0 22px; }
+.stamp-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; max-width: 360px; margin: 0 auto 24px; }
 .stamp {
-  aspect-ratio: 1; border-radius: 10px; display: grid; place-items: center; font-family: var(--f-display); font-size: 18px;
-  border: 2px solid var(--ink);
+  width: 30px; height: 30px; border-radius: 7px; display: grid; place-items: center;
+  font-family: var(--f-display); font-size: 14px; border: 2px solid var(--ink);
 }
 .stamp.ok { background: var(--cool); color: var(--ink); }
 .stamp.no { background: transparent; color: var(--heat); border-color: var(--heat); }
