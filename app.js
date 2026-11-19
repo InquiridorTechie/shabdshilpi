@@ -162,8 +162,8 @@
 
     const v = $("reveal-verdict");
     const lines = correct
-      ? ["Sahi jawaab!", "Ekdum sahi.", "Bars samajh gaye.", "Kya baat hai!"]
-      : key === null ? ["Time up!"] : ["Galat.", "Nahi yaar.", "Close, par nahi."];
+      ? ["Bohot hard!", "Sick bro!", "Aag laga di! 🔥", "Kya baat hai!", "Ekdum fire!", "Tu toh OG nikla!", "Full scene samjha!", "Bars pakad liye!"]
+      : key === null ? ["Time up!"] : ["Arre nahi yaar", "Close tha!", "Agli baar pakka"];
     v.textContent = lines[Math.floor(Math.random() * lines.length)];
     v.className = "verdict " + (correct ? "ok" : "no");
     $("reveal-expl").innerHTML = md(q.explanation);
@@ -284,16 +284,20 @@
 
   // ---------- feedback & report ----------
   function initForms() {
+    const picked = (name) => (document.querySelector(`input[name="${name}"]:checked`) || {}).value || "";
+    $("a9").addEventListener("change", (e) => { $("fb-other").hidden = !e.target.checked; if (e.target.checked) $("fb-other").focus(); });
+    $("fb-add-comment").addEventListener("click", (e) => { e.target.hidden = true; $("fb-more").hidden = false; $("fb-more").focus(); });
     $("feedback").addEventListener("submit", (e) => {
       e.preventDefault();
-      send("feedback", {
-        score,
-        fb_hard: $("fb-hard").value.trim(),
-        fb_again: (document.querySelector('input[name="fb-again"]:checked') || {}).value || "",
-        fb_artist: $("fb-artist").value.trim(),
-        fb_more: $("fb-more").value.trim(),
-        name: $("fb-name").value.trim(),
-      });
+      const artists = [...document.querySelectorAll("#fb-artists input:checked")]
+        .map((i) => (i.value === "other" ? $("fb-other").value.trim() : i.value))
+        .filter(Boolean).join(", ");
+      const fb = {
+        fb_vibe: picked("fb-vibe"), fb_level: picked("fb-level"), fb_bars: picked("fb-bars"),
+        fb_artist: artists, fb_more: $("fb-more").value.trim(),
+      };
+      // "text" keeps a readable summary, so nothing is lost even with an older Sheet script.
+      send("feedback", { score, ...fb, text: `vibe=${fb.fb_vibe}; level=${fb.fb_level}; bars=${fb.fb_bars}; artist=${fb.fb_artist}` });
       $("fb-done").hidden = false;
       e.target.querySelector("button[type=submit]").disabled = true;
     });

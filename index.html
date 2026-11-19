@@ -118,28 +118,55 @@
 
       <form id="feedback" class="feedback">
         <h3>Thoda feedback do</h3>
-        <p class="muted small">Isse quiz behtar banega. Sab optional hai.</p>
-
-        <label for="fb-hard">Kaunsa sawaal sabse boring ya confusing laga, aur kyun?</label>
-        <textarea id="fb-hard" rows="2" maxlength="600"></textarea>
+        <p class="muted small">Bas tap karo. 10 second lagenge.</p>
 
         <fieldset>
-          <legend>Kisi aur artist ka round khelna chahoge?</legend>
+          <legend>Round kaisa laga?</legend>
           <div class="seg">
-            <input type="radio" name="fb-again" id="fb-yes" value="yes"><label for="fb-yes">Haan</label>
-            <input type="radio" name="fb-again" id="fb-maybe" value="maybe"><label for="fb-maybe">Shayad</label>
-            <input type="radio" name="fb-again" id="fb-no" value="no"><label for="fb-no">Nahi</label>
+            <input type="radio" name="fb-vibe" id="v1" value="boring"><label for="v1">😴 Boring</label>
+            <input type="radio" name="fb-vibe" id="v2" value="theek"><label for="v2">🙂 Theek</label>
+            <input type="radio" name="fb-vibe" id="v3" value="mazedaar"><label for="v3">🔥 Mazedaar</label>
           </div>
         </fieldset>
 
-        <label for="fb-artist">Agla round kiska ho?</label>
-        <input id="fb-artist" type="text" maxlength="80" placeholder="e.g. Seedhe Maut">
+        <fieldset>
+          <legend>Sawaal kaise the?</legend>
+          <div class="seg">
+            <input type="radio" name="fb-level" id="l1" value="aasan"><label for="l1">Bahut aasan</label>
+            <input type="radio" name="fb-level" id="l2" value="sahi"><label for="l2">Sahi</label>
+            <input type="radio" name="fb-level" id="l3" value="mushkil"><label for="l3">Bahut mushkil</label>
+          </div>
+        </fieldset>
 
-        <label for="fb-more">Aur kuch? (bars wale sawaal kaise lage?)</label>
-        <textarea id="fb-more" rows="2" maxlength="800"></textarea>
+        <fieldset>
+          <legend>Bars wale sawaal?</legend>
+          <div class="seg">
+            <input type="radio" name="fb-bars" id="b1" value="pasand"><label for="b1">Pasand aaye</label>
+            <input type="radio" name="fb-bars" id="b2" value="theek"><label for="b2">Theek the</label>
+            <input type="radio" name="fb-bars" id="b3" value="samajh-nahi"><label for="b3">Samajh nahi aaye</label>
+          </div>
+        </fieldset>
 
-        <label for="fb-name">Naam ya handle (optional)</label>
-        <input id="fb-name" type="text" maxlength="60" autocomplete="nickname">
+        <fieldset>
+          <legend>Agla round kiska ho? <span class="muted small">(ek se zyada chuno)</span></legend>
+          <div class="chips-pick" id="fb-artists">
+            <input type="checkbox" id="a1" value="DIVINE"><label for="a1">DIVINE</label>
+            <input type="checkbox" id="a2" value="Seedhe Maut"><label for="a2">Seedhe Maut</label>
+            <input type="checkbox" id="a3" value="MC Stan"><label for="a3">MC Stan</label>
+            <input type="checkbox" id="a4" value="Emiway Bantai"><label for="a4">Emiway</label>
+            <input type="checkbox" id="a5" value="Raftaar"><label for="a5">Raftaar</label>
+            <input type="checkbox" id="a6" value="Ikka"><label for="a6">Ikka</label>
+            <input type="checkbox" id="a7" value="Honey Singh"><label for="a7">Honey Singh</label>
+            <input type="checkbox" id="a8" value="Badshah"><label for="a8">Badshah</label>
+            <input type="checkbox" id="a9" value="other"><label for="a9">+ Other</label>
+          </div>
+          <label for="fb-other" class="sr-only">Other artist</label>
+          <input id="fb-other" type="text" maxlength="80" placeholder="Artist ka naam" hidden>
+        </fieldset>
+
+        <button type="button" id="fb-add-comment" class="link-btn">+ Kuch aur kehna hai?</button>
+        <label for="fb-more" class="sr-only">Comment</label>
+        <textarea id="fb-more" rows="2" maxlength="800" placeholder="Optional" hidden></textarea>
 
         <button class="btn btn-primary" type="submit">Feedback bhejo</button>
         <p id="fb-done" class="thanks" hidden>Shukriya! Aapka feedback mil gaya.</p>
