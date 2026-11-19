@@ -1,0 +1,683 @@
+{
+ "round": "KR$NA — Round 1 (APPROVED 2026-11-19)",
+ "artist": "KR$NA",
+ "questions": [
+  {
+   "id": "Q1",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "identify the artist (clue card)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Clue card. Born in Delhi. Spent about five years in London as a teenager. First rapped as Young Prozpekt, later as Prozpekt. Today he is KR$NA. What is his real name?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Krishna Kapoor"
+    },
+    {
+     "key": "B",
+     "text": "Krishna Kaul"
+    },
+    {
+     "key": "C",
+     "text": "Kunal Kaul"
+    },
+    {
+     "key": "D",
+     "text": "Krishna Kumar"
+    }
+   ],
+   "answer": "B",
+   "explanation": "KR$NA is Krishna Kaul. He rapped as Young Prozpekt, then Prozpekt, before he became KR$NA.",
+   "songLink": "https://music.apple.com/in/artist/kr%24na/1462405977",
+   "pending": false
+  },
+  {
+   "id": "Q2",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "identify the song (description)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which KR$NA song is this? It came out on 17 Jan 2024 on Saregama. Its hook comes from a Mukesh classic, and its video was shot in Tokyo, with samurai and yakuza imagery.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Hello"
+    },
+    {
+     "key": "B",
+     "text": "Boom Shaka"
+    },
+    {
+     "key": "C",
+     "text": "Joota Japani"
+    },
+    {
+     "key": "D",
+     "text": "Asian State of Mind"
+    }
+   ],
+   "answer": "C",
+   "explanation": "\"Joota Japani\" turns Mukesh's \"Mera Joota Hai Japani\" into a rap hook. KR$NA called it \"a mix of old and new\".",
+   "songLink": "https://www.youtube.com/watch?v=vR16Gu-Uq00",
+   "pending": false
+  },
+  {
+   "id": "Q3",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "recent news (scene news)",
+   "lead": "",
+   "bar": null,
+   "prompt": "On 23 Oct 2026, KR$NA released the single \"BUZZ\" with which act?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Seedhe Maut"
+    },
+    {
+     "key": "B",
+     "text": "Young Stunners"
+    },
+    {
+     "key": "C",
+     "text": "Badshah"
+    },
+    {
+     "key": "D",
+     "text": "Dhanda Nyoliwala"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"BUZZ\" is a Seedhe Maut and KR$NA single on Mass Appeal, produced by Seedhe Maut's own Calm.",
+   "songLink": "https://music.apple.com/in/album/buzz-single/6825203053",
+   "pending": false
+  },
+  {
+   "id": "Q4",
+   "reserve": false,
+   "kind": "bar",
+   "level": "easy",
+   "seconds": 40,
+   "type": "lyric craft (spot the device)",
+   "lead": "From \"Vyanjan\" (2016)",
+   "bar": [
+    "Kaale krtoot krte kameene kamane ko",
+    "Kaale dhan ke karan kangaal kiya kitne kisaano ko"
+   ],
+   "prompt": "Which device drives these two bars?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Simile (upma)"
+    },
+    {
+     "key": "B",
+     "text": "Alliteration (anupras)"
+    },
+    {
+     "key": "C",
+     "text": "Personification (manvikaran)"
+    },
+    {
+     "key": "D",
+     "text": "Hyperbole (atishyokti)"
+    }
+   ],
+   "answer": "B",
+   "explanation": "Almost every word starts with \"k\" (क). The whole song gives each Hindi consonant its own section, like a school lesson.",
+   "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
+   "pending": false
+  },
+  {
+   "id": "Q5",
+   "reserve": false,
+   "kind": "bar",
+   "level": "easy",
+   "seconds": 40,
+   "type": "lyric craft (code-switch)",
+   "lead": "The \"Hola Amigo\" hook opens",
+   "bar": [
+    "Hola amigo (Yeah, yeah), kaise ho, theek ho?",
+    "Kya chal raha hai bruv?"
+   ],
+   "prompt": "How many languages does it mix?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "3"
+    },
+    {
+     "key": "D",
+     "text": "4"
+    }
+   ],
+   "answer": "C",
+   "explanation": "Spanish (\"hola amigo\"), Hindi (\"kaise ho, theek ho\") and British English slang (\"bruv\"). That is code-switching for effect. KR$NA said the hook \"sounded funny in the moment\", so he kept it.",
+   "songLink": "https://www.youtube.com/watch?v=De9VIp37CjY",
+   "pending": false
+  },
+  {
+   "id": "Q6",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "albums and discography",
+   "lead": "",
+   "bar": null,
+   "prompt": "What is the name of KR$NA's debut album, released in 2014 on Universal Music?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Still Here"
+    },
+    {
+     "key": "B",
+     "text": "Far From Over"
+    },
+    {
+     "key": "C",
+     "text": "Time Will Tell"
+    },
+    {
+     "key": "D",
+     "text": "Sellout"
+    }
+   ],
+   "answer": "D",
+   "explanation": "He made *Sellout* in about two and a half months. His next album, *Still Here*, did not come until 2021.",
+   "songLink": "https://music.apple.com/in/album/sellout/1444104236",
+   "pending": false
+  },
+  {
+   "id": "Q7",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "collaborations (launch artists)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which launch artist features on both \"Roll Up\" (from *Still Here*, 2021) and \"Vibrate\" (from *Yours Truly*, 2025)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Badshah"
+    },
+    {
+     "key": "B",
+     "text": "Raftaar"
+    },
+    {
+     "key": "C",
+     "text": "Ikka"
+    },
+    {
+     "key": "D",
+     "text": "DIVINE"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Badshah is on both: \"Roll Up\" on *Still Here* (2021) and \"Vibrate\" on *Yours Truly* (2025).",
+   "songLink": "https://music.apple.com/in/album/yours-truly/1814144078",
+   "pending": false
+  },
+  {
+   "id": "Q8",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "slang and references (the hook update)",
+   "lead": "KR$NA's chorus",
+   "bar": [
+    "Joota Japani, ye patloon Armani",
+    "Sar pe aaj topi Gucci, phir bhi dil hai Hindustani"
+   ],
+   "prompt": "In the 1955 original, the patloon and the topi came from two countries. Which two did he swap for luxury brands?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Japan and England"
+    },
+    {
+     "key": "B",
+     "text": "England and Russia"
+    },
+    {
+     "key": "C",
+     "text": "Russia and America"
+    },
+    {
+     "key": "D",
+     "text": "England and France"
+    }
+   ],
+   "answer": "B",
+   "explanation": "Mukesh sang of an English patloon and a Russian red topi. KR$NA keeps Japan and the Indian heart, swaps the rest for Armani and Gucci, and keeps the \"-aani\" rhyme.",
+   "songLink": "https://www.youtube.com/watch?v=vR16Gu-Uq00",
+   "pending": false
+  },
+  {
+   "id": "Q9",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "scene history",
+   "lead": "",
+   "bar": null,
+   "prompt": "KR$NA is a partner in the label Kalamkaar. Which launch artist co-founded Kalamkaar with Ankit Khanna?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Badshah"
+    },
+    {
+     "key": "B",
+     "text": "Ikka"
+    },
+    {
+     "key": "C",
+     "text": "DIVINE"
+    },
+    {
+     "key": "D",
+     "text": "Raftaar"
+    }
+   ],
+   "answer": "D",
+   "explanation": "Raftaar and Ankit Khanna founded it. KR$NA joined when it was still called AK Projekts.",
+   "songLink": "https://music.apple.com/us/album/sensitive/1814144078",
+   "pending": false
+  },
+  {
+   "id": "Q10",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "scene history (labels)",
+   "lead": "",
+   "bar": null,
+   "prompt": "In April 2025, KR$NA announced that his next project would come out on Mass Appeal, the New York label. Which US rapper's label is Mass Appeal?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Jay-Z"
+    },
+    {
+     "key": "B",
+     "text": "Eminem"
+    },
+    {
+     "key": "C",
+     "text": "Nas"
+    },
+    {
+     "key": "D",
+     "text": "Kendrick Lamar"
+    }
+   ],
+   "answer": "C",
+   "explanation": "Mass Appeal is Nas's label. The news came after Nas's first India show, a Mumbai charity concert on 19 Apr 2025, where KR$NA also performed. *Yours Truly* (22 May 2025) came out on Mass Appeal.",
+   "songLink": "https://music.apple.com/us/album/sensitive/1814144078",
+   "pending": false
+  },
+  {
+   "id": "Q11",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "producers and beats",
+   "lead": "",
+   "bar": null,
+   "prompt": "Who made the beat for \"Joota Japani\" (2024)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Umair"
+    },
+    {
+     "key": "B",
+     "text": "Deep Kalsi"
+    },
+    {
+     "key": "C",
+     "text": "Phenom"
+    },
+    {
+     "key": "D",
+     "text": "Calm"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Umair, a Pakistani producer, flipped the 1955 original into a drill beat.",
+   "songLink": "https://www.youtube.com/watch?v=vR16Gu-Uq00",
+   "pending": false
+  },
+  {
+   "id": "Q12",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (bilingual pun)",
+   "lead": "From \"Hola Amigo\"",
+   "bar": [
+    "Tu kaafi hai, ya bola mera ji (Mera ji)",
+    "Kaafi hai, yahan main aur mere G (Mere G)"
+   ],
+   "prompt": "What links \"mera ji\" and \"mere G\"?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A simile that compares his heart to his crew"
+    },
+    {
+     "key": "B",
+     "text": "A slant rhyme, where the vowels differ"
+    },
+    {
+     "key": "C",
+     "text": "A bilingual pun: one sound, a Hindi word and an English slang word"
+    },
+    {
+     "key": "D",
+     "text": "Hyperbole about how big his crew is"
+    }
+   ],
+   "answer": "C",
+   "explanation": "\"Ji\" is Hindi (heart, or a term of respect) and \"G\" is English slang for a close friend. They sound the same, and the ad-libs repeat both to make the pun obvious.",
+   "songLink": "https://www.youtube.com/watch?v=De9VIp37CjY",
+   "pending": false
+  },
+  {
+   "id": "Q13",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (deep cut)",
+   "lead": "",
+   "bar": null,
+   "prompt": "In 2010, before he was KR$NA, he released \"Kaisa Mera Desh\" under his early name, Prozpekt. Which scandal did the song take on?",
+   "options": [
+    {
+     "key": "A",
+     "text": "The 2G spectrum scam"
+    },
+    {
+     "key": "B",
+     "text": "The coal allocation scam"
+    },
+    {
+     "key": "C",
+     "text": "The Adarsh Housing scam"
+    },
+    {
+     "key": "D",
+     "text": "The Commonwealth Games (CWG) scam"
+    }
+   ],
+   "answer": "D",
+   "explanation": "\"Kaisa Mera Desh\" was an anti-corruption song about the CWG scam, which shows he wrote political rap long before \"Vyanjan\".",
+   "songLink": "https://www.youtube.com/watch?v=tBy-sJVPErE",
+   "pending": false
+  },
+  {
+   "id": "Q14",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (sound over spelling)",
+   "lead": "From the first T section of \"Vyanjan\" (the hard T)",
+   "bar": [
+    "Taali tehle toli, takra ke tooti taang",
+    "T.I taange tedi topi, takla tha 2Pac"
+   ],
+   "prompt": "Why do \"T.I\" and \"2Pac\" fit into a song built on Hindi consonants?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Both rappers are guests on the original version of the song"
+    },
+    {
+     "key": "B",
+     "text": "The section's rule is that every word starts with the letter's sound, and both names start with that T sound"
+    },
+    {
+     "key": "C",
+     "text": "They are the only English words in the song"
+    },
+    {
+     "key": "D",
+     "text": "The T section is a list of his influences, so the letter rule does not apply there"
+    }
+   ],
+   "answer": "B",
+   "explanation": "The rule holds by sound, not by script. Said aloud, both English names start with the same hard T as \"topi\", \"takla\" and \"tedi\". \"2Pac\" even starts with a number. This is \"sound over spelling\".",
+   "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
+   "pending": false
+  },
+  {
+   "id": "Q15",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (deep cut)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Rolling Stone India called \"Hola Amigo\" part of a \"barter of sorts\" between KR$NA and Seedhe Maut. Which song was the other half of the trade, on Seedhe Maut's mixtape *Lunch Break*?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Khatta Flow"
+    },
+    {
+     "key": "B",
+     "text": "Sensitive"
+    },
+    {
+     "key": "C",
+     "text": "BUZZ"
+    },
+    {
+     "key": "D",
+     "text": "Prarthana"
+    }
+   ],
+   "answer": "A",
+   "explanation": "KR$NA is on Seedhe Maut's \"Khatta Flow\" (*Lunch Break*, 19 Aug 2023), and Seedhe Maut are on his \"Hola Amigo\" (*FAR FROM OVER*, 29 Aug 2023). Both came out in August 2023.",
+   "songLink": "https://www.youtube.com/watch?v=De9VIp37CjY",
+   "pending": false
+  },
+  {
+   "id": "R1",
+   "reserve": true,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "identify the artist (clue card)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Clue card. A Pakistani rap duo. Each member guests on a different song on KR$NA's 2023 EP *Time Will Tell*, which came out all at once instead of single by single. Who are they?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Seedhe Maut"
+    },
+    {
+     "key": "B",
+     "text": "Young Stunners"
+    },
+    {
+     "key": "C",
+     "text": "Dhanda Nyoliwala"
+    },
+    {
+     "key": "D",
+     "text": "Awich"
+    }
+   ],
+   "answer": "B",
+   "explanation": "Young Stunners are Talha Anjum and Talhah Yunus. Talhah Yunus is on \"NGL\" and Talha Anjum is on \"Been A While\".",
+   "songLink": "https://music.apple.com/in/artist/kr%24na/1462405977",
+   "pending": false
+  },
+  {
+   "id": "R2",
+   "reserve": true,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "identify the song (fact or myth)",
+   "lead": "",
+   "bar": null,
+   "prompt": "\"Vyanjan\" opens with lines about \"kaale dhan\" (black money). When did KR$NA say he wrote those opening lines?",
+   "options": [
+    {
+     "key": "A",
+     "text": "The week after the Nov 2016 demonetisation announcement"
+    },
+    {
+     "key": "B",
+     "text": "In 2017, for a re-release"
+    },
+    {
+     "key": "C",
+     "text": "During the 2020 lockdown"
+    },
+    {
+     "key": "D",
+     "text": "Before the Nov 2016 demonetisation announcement"
+    }
+   ],
+   "answer": "D",
+   "explanation": "He wrote them before the announcement. They just happened to fit the moment when the video came out.",
+   "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
+   "pending": false
+  },
+  {
+   "id": "R3",
+   "reserve": true,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (beef, dated facts only)",
+   "lead": "",
+   "bar": null,
+   "prompt": "In July 2022, KR$NA and Emiway Bantai each released a diss track with the same title (spelled slightly differently). What was it?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Lil Bunty"
+    },
+    {
+     "key": "B",
+     "text": "Makasam"
+    },
+    {
+     "key": "C",
+     "text": "Machayenge 4"
+    },
+    {
+     "key": "D",
+     "text": "No Cap"
+    }
+   ],
+   "answer": "C",
+   "explanation": "KR$NA's \"Machayenge 4\" came out on 8 July 2022. Emiway answered with his own \"Machayengey 4\" a few days later, by 12 July 2022.",
+   "songLink": "https://music.apple.com/in/album/machayenge-4/1633774723",
+   "pending": false
+  },
+  {
+   "id": "R4",
+   "reserve": true,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "slang and references",
+   "lead": "From \"Joota Japani\"",
+   "bar": [
+    "Srinagar jaise gehra hai Dal, flow bahta hai jal jaise Zainakadal, beta (Haan)"
+   ],
+   "prompt": "What are Dal and Zaina Kadal?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A lake and a bridge in Srinagar"
+    },
+    {
+     "key": "B",
+     "text": "Two rivers in Kashmir"
+    },
+    {
+     "key": "C",
+     "text": "A lake in Srinagar and a market in Delhi"
+    },
+    {
+     "key": "D",
+     "text": "Two old neighbourhoods of Delhi"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Both are in Srinagar: Dal Lake, and Zaina Kadal, one of the city's old bridges over the Jhelum. The line uses \"jaise\" to compare his flow to the water there.",
+   "songLink": "https://www.youtube.com/watch?v=vR16Gu-Uq00",
+   "pending": false
+  },
+  {
+   "id": "R5",
+   "reserve": true,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (letter order)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Near the end of \"Vyanjan\", two letters get one word each: \"Kshatriya / Trishool\". One more one-word section closes the song. Which letter is it?",
+   "options": [
+    {
+     "key": "A",
+     "text": "ह (ha)"
+    },
+    {
+     "key": "B",
+     "text": "ज्ञ (gya)"
+    },
+    {
+     "key": "C",
+     "text": "ण (na)"
+    },
+    {
+     "key": "D",
+     "text": "ष (sha)"
+    }
+   ],
+   "answer": "B",
+   "explanation": "Many school charts end the consonants with the joined letters क्ष (ksha), त्र (tra) and ज्ञ (gya), and some add श्र (shra) after them. The song closes on those three: Kshatriya, Trishool, Gyani.",
+   "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
+   "pending": false
+  }
+ ]
+}
