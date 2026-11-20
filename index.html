@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Shabdshilpi · KR$NA Round</title>
-  <meta name="description" content="15 sawaal. Timer on. How well do you know KR$NA's bars?">
+  <title>Shabdshilpi · DHH Quiz</title>
+  <meta name="description" content="15 sawaal. Timer on. How well do you know your favourite rapper's bars?">
   <meta name="theme-color" content="#0c0c0e">
-  <meta property="og:title" content="Shabdshilpi · KR$NA Round">
-  <meta property="og:description" content="15 sawaal. Timer on. How well do you know KR$NA's bars?">
+  <meta property="og:title" content="Shabdshilpi · DHH Quiz">
+  <meta property="og:description" content="15 sawaal. Timer on. How well do you know your favourite rapper's bars?">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kalam:wght@400;700&family=Mukta:wght@400;600;800&family=Rozha+One&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -26,16 +26,27 @@
   </header>
 
   <main id="app" class="app">
+    <!-- PICK ARTIST (main link without ?a=) -->
+    <section id="screen-pick" class="screen" aria-labelledby="pick-title">
+      <div class="marquee" aria-hidden="true"><div class="marquee-track">
+        <span>BARS • FACTS • FLOW • WORDPLAY • KALAM • </span><span>BARS • FACTS • FLOW • WORDPLAY • KALAM • </span>
+      </div></div>
+      <p class="kicker">DHH Quiz</p>
+      <h1 id="pick-title" class="pick-title">Kiska round khelna hai?</h1>
+      <div id="artist-list" class="artist-list"></div>
+      <p class="muted small">Aur artists jaldi aa rahe hain.</p>
+    </section>
+
     <!-- START -->
-    <section id="screen-start" class="screen is-active" aria-labelledby="start-title">
+    <section id="screen-start" class="screen" aria-labelledby="start-title">
       <div class="marquee" aria-hidden="true"><div class="marquee-track">
         <span>BARS • FACTS • FLOW • WORDPLAY • KALAM • </span><span>BARS • FACTS • FLOW • WORDPLAY • KALAM • </span>
       </div></div>
 
-      <p class="kicker">Round 01</p>
+      <p class="kicker"><a href="./" class="back-link" id="back-link" hidden>← Artists</a> Round 01</p>
       <h1 id="start-title" class="poster">
-        <span class="poster-fill">KR$NA</span>
-        <span class="poster-outline" aria-hidden="true">KR$NA</span>
+        <span class="poster-fill" id="poster-name"></span>
+        <span class="poster-outline" id="poster-echo" aria-hidden="true"></span>
       </h1>
       <p class="tagline">Facts, bars, aur thoda wordplay. Kitna jaante ho?</p>
 
@@ -55,9 +66,15 @@
         <input id="player-name" type="text" maxlength="20" autocomplete="nickname" placeholder="Jaise: Aman" enterkeyhint="go">
       </div>
 
-      <button id="btn-start" class="btn btn-primary" type="button">
-        <span>Shuru karo</span><span aria-hidden="true">→</span>
-      </button>
+      <div class="mode-row">
+        <button id="btn-start" class="btn btn-primary" type="button">
+          <span>Shuru karo</span><span aria-hidden="true">→</span>
+        </button>
+        <button id="btn-hardcore" class="btn btn-hardcore" type="button">
+          <span class="hc-title">Hardcore 🔥</span>
+          <span class="hc-sub">Deep cuts · 15s facts · 30s bars</span>
+        </button>
+      </div>
       <p id="practice-note" class="muted small" hidden></p>
     </section>
 
@@ -68,6 +85,7 @@
         <div class="meta">
           <span id="q-kind" class="tag">Fact</span>
           <span id="q-level" class="tag tag-ghost">Easy</span>
+          <span id="q-explicit" class="tag tag-explicit" title="Explicit lyrics" hidden>🅴 Explicit</span>
         </div>
         <div class="score-mini" aria-label="Score">Score <b id="score-live">0</b></div>
       </div>
@@ -106,7 +124,7 @@
 
     <!-- RESULT -->
     <section id="screen-result" class="screen" aria-labelledby="result-title">
-      <p class="kicker" id="result-kicker">KR$NA · Round 01</p>
+      <p class="kicker" id="result-kicker"></p>
       <div class="scoreboard">
         <div class="big-score"><span id="final-score">0</span><span class="of">/15</span></div>
         <h2 id="result-title" class="rank">Scene Mein Hai</h2>
@@ -154,6 +172,7 @@
         <fieldset>
           <legend>Agla round kiska ho? <span class="muted small">(ek se zyada chuno)</span></legend>
           <div class="chips-pick" id="fb-artists">
+            <input type="checkbox" id="a0" value="KR$NA"><label for="a0">KR$NA</label>
             <input type="checkbox" id="a1" value="DIVINE"><label for="a1">DIVINE</label>
             <input type="checkbox" id="a2" value="Seedhe Maut"><label for="a2">Seedhe Maut</label>
             <input type="checkbox" id="a3" value="MC Stan"><label for="a3">MC Stan</label>

@@ -3,7 +3,11 @@
   "use strict";
 
   const CFG = window.SS_CONFIG || {};
-  const ROUND = CFG.roundId || "round";
+  // Which artist? ?a=<slug> in the link. No ?a= shows the artist picker.
+  const params = new URLSearchParams(location.search);
+  const ARTIST_SLUG = (params.get("a") || "").toLowerCase();
+  let ARTIST = "";       // display name, e.g. "KR$NA"
+  let ROUND = "round";   // round id, e.g. "krsna-r1" (Sheet + saved first scores)
   const $ = (id) => document.getElementById(id);
 
   // ---------- state ----------
@@ -21,9 +25,18 @@
     get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode */ } },
   };
-  const attemptsKey = `ss_${ROUND}_attempts`;
-  const firstKey = `ss_${ROUND}_first`;
-  let attempt = store.get(attemptsKey, 0) + 1;
+  // ---------- modes ----------
+  // Reading time: about 3 words a second, plus thinking time. The timer is never shorter than the mode's base time.
+  const WORDS_PER_SEC = 3, MAX_SECS = 60;
+  const wordCount = (q) => [q.lead, ...(q.bar || []), q.prompt, ...q.options.map((o) => o.text)].join(" ").split(/\s+/).filter(Boolean).length;
+  const MODES = {
+    normal: { label: "Normal", levels: [["easy", 5], ["medium", 7], ["hard", 3]], bars: [4, 6], secs: { fact: 20, bar: 40 }, think: { fact: 10, bar: 15 }, get key() { return ROUND; } },
+    hardcore: { label: "Hardcore", levels: [["easy", 0], ["medium", 2], ["hard", 13]], bars: [4, 6], secs: { fact: 15, bar: 30 }, think: { fact: 7, bar: 10 }, get key() { return ROUND + "-hc"; } },
+  };
+  let mode = "normal";
+  const attemptsKey = () => `ss_${MODES[mode].key}_attempts`;
+  const firstKey = () => `ss_${MODES[mode].key}_first`;
+  let attempt = 1;
   const nameKey = "ss_player_name";
   let playerName = store.get(nameKey, "");
   const cleanName = (v) => v.replace(/[^\p{L}\p{N} ._'-]/gu, "").replace(/\s+/g, " ").trim().slice(0, 20);
@@ -31,7 +44,7 @@
   // ---------- logging to Google Sheet ----------
   function send(event, data = {}) {
     const row = {
-      ts: new Date().toISOString(), session, round: ROUND, attempt, event, name: playerName,
+      ts: new Date().toISOString(), session, round: ROUND, attempt, event, name: playerName, mode,
       ...data,
       ua: navigator.userAgent.slice(0, 160),
     };
@@ -61,39 +74,63 @@
     for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
     return a;
   };
-  const LEVELS = [["easy", 5], ["medium", 7], ["hard", 3]];
-  const BARS_MIN = 4, BARS_MAX = 6;
-
-  // Pick 15 from the pool: 5 easy, 7 medium, 3 hard, easy to hard, shuffled inside each level,
-  // with 4-6 bar questions. Options are shuffled too (number-only options stay in order).
+  // Pick 15 from the pool by the mode's level mix (easy to hard, shuffled inside each level),
+  // with 4-6 bar questions. If a level runs short, the gap is filled from the next level down.
+  // Options are shuffled too (number-only options stay in order).
   function buildRound() {
+    const M = MODES[mode];
+    const total = M.levels.reduce((a, [, n]) => a + n, 0);
+    const byId = Object.fromEntries(pool.map((q) => [q.id, q]));
     let picked = [];
     for (let tries = 0; tries < 200; tries++) {
-      picked = LEVELS.flatMap(([lvl, n]) => shuffle(pool.filter((q) => q.level === lvl)).slice(0, n));
+      const used = new Set();
+      // "avoid" pairs (e.g. a "who said this bar?" question and a question naming that rapper) never share a play
+      const clash = (q) => [...used].some((id) => (q.avoid || []).includes(id) || (byId[id].avoid || []).includes(q.id));
+      const take = (lvl, n) => {
+        const got = [];
+        for (const q of shuffle(pool.filter((x) => x.level === lvl && !used.has(x.id)))) {
+          if (got.length >= n) break;
+          if (clash(q)) continue;
+          used.add(q.id); got.push(q);
+        }
+        return got;
+      };
+      const byLevel = Object.fromEntries(M.levels.map(([lvl, n]) => [lvl, take(lvl, n)]));
+      let short = total - Object.values(byLevel).reduce((a, l) => a + l.length, 0);
+      for (const lvl of ["hard", "medium", "easy"]) {
+        if (short <= 0) break;
+        const extra = take(lvl, short); byLevel[lvl].push(...extra); short -= extra.length;
+      }
+      picked = ["easy", "medium", "hard"].flatMap((lvl) => shuffle(byLevel[lvl] || []));
       const bars = picked.filter((q) => q.kind === "bar").length;
-      if (bars >= BARS_MIN && bars <= BARS_MAX) break;
+      if (bars >= M.bars[0] && bars <= M.bars[1]) break;
     }
     return picked.map((q) => {
       const numeric = q.options.every((o) => /^\d+$/.test(o.text.trim()));
-      return { ...q, shown: numeric ? q.options.slice() : shuffle(q.options) };
+      const seconds = Math.min(MAX_SECS, Math.max(M.secs[q.kind], Math.ceil(wordCount(q) / WORDS_PER_SEC + M.think[q.kind])));
+      return { ...q, seconds, shown: numeric ? q.options.slice() : shuffle(q.options) };
     });
   }
 
   // ---------- start ----------
   function initStart() {
-    const first = store.get(firstKey, null);
-    if (first) {
+    const notes = Object.keys(MODES).map((m) => [m, store.get(`ss_${MODES[m].key}_first`, null)]).filter(([, f]) => f);
+    if (notes.length) {
       const note = $("practice-note");
       note.hidden = false;
-      note.textContent = `Practice run. Aapka pehla score (${first.score}/${first.total}) hi count hoga.`;
+      note.textContent = "Pehla score count hota hai: " + notes.map(([m, f]) => `${MODES[m].label} ${f.score}/${f.total}`).join(" · ") + ". Ab replays practice hain.";
     }
     const input = $("player-name");
     input.value = playerName;
-    input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); startRound(); } });
-    $("btn-start").addEventListener("click", startRound);
+    input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); startRound("normal"); } });
+    $("btn-start").addEventListener("click", () => startRound("normal"));
+    $("btn-hardcore").addEventListener("click", () => startRound("hardcore"));
   }
 
-  function startRound() {
+  function startRound(m) {
+    if (m) mode = m;
+    attempt = store.get(attemptsKey(), 0) + 1;
+    document.body.classList.toggle("is-hardcore", mode === "hardcore");
     playerName = cleanName($("player-name").value || "");
     store.set(nameKey, playerName);
     idx = 0; score = 0; results = []; locked = false;
@@ -115,6 +152,7 @@
     kind.textContent = q.kind === "bar" ? "Bar" : "Fact";
     kind.classList.toggle("is-bar", q.kind === "bar");
     $("q-level").textContent = q.level;
+    $("q-explicit").hidden = !q.explicit;
 
     $("q-lead").innerHTML = q.lead ? md(q.lead) : "";
     const bar = $("q-bar");
@@ -244,6 +282,12 @@
   // ---------- result ----------
   function rankFor(s, n) {
     const p = s / n;
+    if (mode === "hardcore") {
+      if (p >= 0.87) return ["Hardcore Shabdshilpi", "Ye level alag hai. Full respect."];
+      if (p >= 0.6) return ["Underground Certified", "Deep cuts bhi pakad liye. Solid."];
+      if (p >= 0.34) return ["Hardcore Survivor", "Hardcore mein tika rehna bhi badi baat hai."];
+      return ["Hardcore Ne Hila Diya", "Ye mode tough hai. Normal pe warm-up karo, phir aao."];
+    }
     if (p >= 0.87) return ["Shabdshilpi", "Bars ki poori samajh. Respect."];
     if (p >= 0.6) return ["Bars Pakad Leta", "Deep listener. Thoda aur, aur tum top pe."];
     if (p >= 0.34) return ["Scene Mein Hai", "Basics strong hain. Bars wale sawaal dobara suno."];
@@ -253,16 +297,17 @@
   function finish() {
     const n = questions.length;
     const totalMs = results.reduce((a, r) => a + r.ms, 0);
-    const first = store.get(firstKey, null);
-    if (!first) store.set(firstKey, { score, total: n, at: new Date().toISOString() });
-    store.set(attemptsKey, attempt);
+    const first = store.get(firstKey(), null);
+    if (!first) store.set(firstKey(), { score, total: n, at: new Date().toISOString() });
+    store.set(attemptsKey(), attempt);
 
     send("finish", {
       score, total: n, ms: totalMs,
       answers: results.map((r) => `${r.id}:${r.choice ?? "-"}${r.correct ? "+" : "x"}${Math.round(r.ms / 1000)}s`).join(" "),
     });
 
-    $("result-kicker").textContent = playerName ? `${playerName} · KR$NA Round 01` : "KR$NA · Round 01";
+    const tag = mode === "hardcore" ? `${ARTIST} · Hardcore 🔥` : `${ARTIST} · Round 01`;
+    $("result-kicker").textContent = playerName ? `${playerName} · ${tag}` : tag;
     $("final-score").textContent = score;
     document.querySelector(".big-score .of").textContent = "/" + n;
     const [title, sub] = rankFor(score, n);
@@ -297,7 +342,7 @@
     // wordmark
     g.textAlign = "left"; g.textBaseline = "alphabetic";
     g.fillStyle = "#e8ff3c"; g.font = "64px 'Rozha One'"; g.fillText("शब्दशिल्पी", 80, 330);
-    g.fillStyle = "#b9b3a6"; g.font = "34px Anton"; g.fillText("KR$NA · ROUND 01", 80, 390);
+    g.fillStyle = "#b9b3a6"; g.font = "34px Anton"; g.fillText(`${ARTIST.toUpperCase()} · ${mode === "hardcore" ? "HARDCORE MODE" : "ROUND 01"}`, 80, 390);
     if (playerName) { g.fillStyle = "#f2ede2"; g.font = "56px Kalam"; g.fillText(`${playerName} ka score`, 80, 455); }
     // score
     g.font = "420px Anton"; g.fillStyle = "#ff4b2b"; g.fillText(String(score), 92, 860);
@@ -320,12 +365,12 @@
 
   async function share() {
     const n = questions.length;
-    const text = `${playerName ? playerName + " here! " : ""}Maine Shabdshilpi ka KR$NA round khela: ${score}/${n} (${rankFor(score, n)[0]}). Tum kitna jaante ho?`;
+    const text = `${playerName ? playerName + " here! " : ""}Maine Shabdshilpi ka ${ARTIST} ${mode === "hardcore" ? "Hardcore round" : "round"} khela: ${score}/${n} (${rankFor(score, n)[0]}). Tum kitna jaante ho?`;
     const url = location.href.split("#")[0];
     send("share_tap", { score });
     try {
       const blob = await makeCard();
-      const file = new File([blob], "shabdshilpi-krsna.png", { type: "image/png" });
+      const file = new File([blob], `shabdshilpi-${ARTIST_SLUG}.png`, { type: "image/png" });
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
         await navigator.share({ files: [file], text: text + " " + url });
         return;
@@ -364,10 +409,7 @@
     });
     $("btn-next").addEventListener("click", next);
     $("btn-share").addEventListener("click", share);
-    $("btn-replay").addEventListener("click", () => {
-      attempt = store.get(attemptsKey, 0) + 1;
-      startRound();
-    });
+    $("btn-replay").addEventListener("click", () => startRound(mode));
     document.addEventListener("keydown", (e) => {
       if (!$("screen-quiz").classList.contains("is-active")) return;
       if (e.target.tagName === "TEXTAREA" || e.target.tagName === "INPUT") return;
@@ -381,14 +423,47 @@
   }
 
   // ---------- boot ----------
-  fetch("questions.json", { cache: "no-store" })
+  const fail = (where) => $(where).insertAdjacentHTML("beforeend", '<p class="muted">Load nahi hua. Page refresh karo.</p>');
+
+  function showPicker(artists) {
+    $("artist-list").innerHTML = artists.map((a) =>
+      `<a class="artist-card" href="?a=${encodeURIComponent(a.slug)}"><span class="an">${esc(a.name)}</span><span class="ac">${a.count} sawaal<br>Normal<br>Hardcore 🔥</span></a>`).join("");
+    show("screen-pick");
+  }
+
+  function setPoster(name) {
+    const words = name.split(/\s+/);
+    const longest = Math.max(...words.map((w) => w.length));
+    const size = `min(${Math.min(27, Math.floor(135 / longest))}vw, ${Math.min(168, Math.floor(840 / longest))}px)`;
+    $("start-title").classList.toggle("multi", words.length > 1);
+    ["poster-name", "poster-echo"].forEach((id) => {
+      const el = $(id);
+      el.innerHTML = words.map(esc).join("<br>");
+      el.style.fontSize = size;
+    });
+  }
+
+  fetch("data/artists.json", { cache: "no-store" })
     .then((r) => r.json())
+    .then(({ artists }) => {
+      const a = artists.find((x) => x.slug === ARTIST_SLUG);
+      if (!a) { showPicker(artists); return null; }
+      ARTIST = a.name; ROUND = a.round;
+      document.title = `Shabdshilpi · ${a.name} Round`;
+      setPoster(a.name);
+      $("back-link").hidden = artists.length < 2;
+      // the next-artist chips shouldn't offer the artist you just played
+      document.querySelectorAll("#fb-artists input").forEach((i) => {
+        if (i.value.toLowerCase() === a.name.toLowerCase()) { i.remove(); document.querySelector(`label[for="${i.id}"]`)?.remove(); }
+      });
+      return fetch(`data/${a.slug}.json`, { cache: "no-store" }).then((r) => r.json());
+    })
     .then((data) => {
+      if (!data) return;
       pool = data.questions;
+      show("screen-start");
       initStart();
       initForms();
     })
-    .catch(() => {
-      $("screen-start").insertAdjacentHTML("beforeend", '<p class="muted">Questions load nahi hue. Page refresh karo.</p>');
-    });
+    .catch(() => fail("app"));
 })();

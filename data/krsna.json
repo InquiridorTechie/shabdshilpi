@@ -1,7 +1,545 @@
 {
- "round": "KR$NA — Round 1 (APPROVED 2026-11-19)",
+ "round": "krsna-r1",
  "artist": "KR$NA",
  "questions": [
+  {
+   "id": "H1",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (deep cut)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which UK rapper features on \"Who You Are\" from *Yours Truly* (2025)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "French the Kid"
+    },
+    {
+     "key": "B",
+     "text": "Aitch"
+    },
+    {
+     "key": "C",
+     "text": "AR Paisley"
+    },
+    {
+     "key": "D",
+     "text": "Faris Shafi"
+    }
+   ],
+   "answer": "B",
+   "explanation": "Aitch is on \"Who You Are\". KR$NA's other UK link, French the Kid (whom he met in London), is on the drill song \"10 Pe 10\".",
+   "songLink": "https://music.apple.com/in/album/yours-truly/1814144078",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H2",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "producers and beats",
+   "lead": "",
+   "bar": null,
+   "prompt": "Who produced \"Jaanta Kyun\" (2019)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Karan Kanchan"
+    },
+    {
+     "key": "B",
+     "text": "Phenom"
+    },
+    {
+     "key": "C",
+     "text": "Deep Kalsi"
+    },
+    {
+     "key": "D",
+     "text": "Tone Jonez"
+    }
+   ],
+   "answer": "C",
+   "explanation": "Deep Kalsi made the beat. He worked with KR$NA again on \"Role Model\" from *For The Day One$* (2024).",
+   "songLink": "https://music.apple.com/in/artist/kr%24na/1462405977",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H3",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "From the V section of \"Vyanjan\"",
+   "bar": [
+    "Vardi vaale veer, voh vatan ki vafadari",
+    "Vaise vartaman mei varnbhed vinashkaari"
+   ],
+   "prompt": "KR$NA has explained these lines. Which two subjects does he set side by side?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Soldiers' loyalty to the nation, and caste discrimination today"
+    },
+    {
+     "key": "B",
+     "text": "Police in uniform, and political corruption"
+    },
+    {
+     "key": "C",
+     "text": "Soldiers' sacrifice, and religious riots"
+    },
+    {
+     "key": "D",
+     "text": "Farmers' hardship, and black money"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Vardi vaale veer\" are soldiers in uniform, and \"varnbhed\" is discrimination by varna (caste). \"Vaise\" turns praise into criticism. KR$NA said the lines salute the Army and call caste a malaise to uproot.",
+   "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H4",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (deep cut)",
+   "lead": "",
+   "bar": null,
+   "prompt": "On \"Asian State of Mind\" (2025), KR$NA raps alongside artists from four other Asian countries. Who represents South Korea?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Awich"
+    },
+    {
+     "key": "B",
+     "text": "MaSiWei"
+    },
+    {
+     "key": "C",
+     "text": "Jay Park"
+    },
+    {
+     "key": "D",
+     "text": "VannDa"
+    }
+   ],
+   "answer": "C",
+   "explanation": "Jay Park is the Korean voice. The song is Japanese rapper Awich's single (28 Feb 2025), with MaSiWei (China) and VannDa (Cambodia) as the other guests. Awich is also on \"Hello\" from *Yours Truly*.",
+   "songLink": "https://www.youtube.com/watch?v=zCODla5q-ps",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H5",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "albums and discography",
+   "lead": "",
+   "bar": null,
+   "prompt": "KR$NA's 2023 EP *FAR FROM OVER* has five songs. Which one features AR Paisley?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Still Standing"
+    },
+    {
+     "key": "B",
+     "text": "Some Of Us"
+    },
+    {
+     "key": "C",
+     "text": "Prarthana"
+    },
+    {
+     "key": "D",
+     "text": "Wanna Know"
+    }
+   ],
+   "answer": "B",
+   "explanation": "\"Some Of Us\" features AR Paisley. Seedhe Maut are on another song from the same EP, \"Hola Amigo\".",
+   "songLink": "https://music.apple.com/in/album/far-from-over-ep/6776950515",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H6",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "From \"Joota Japani\"",
+   "bar": [
+    "Gang lage fauj, yahan vardi mein sab",
+    "Hand on the heat, pehente garmi mein gloves"
+   ],
+   "prompt": "What do \"heat\" and \"garmi\" do in the second bar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Heat = gun slang; garmi = Hindi for heat"
+    },
+    {
+     "key": "B",
+     "text": "Both mean anger; he stays calm"
+    },
+    {
+     "key": "C",
+     "text": "Heat = hot beat; gloves = DJ gear"
+    },
+    {
+     "key": "D",
+     "text": "Both describe the Tokyo shoot weather"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Heat\" is slang for a gun, so \"hand on the heat\" means a hand on a gun. \"Garmi\" is Hindi for heat, so wearing gloves in the garmi (summer) suggests hiding fingerprints. The word \"heat\" plays across two languages. The first bar sets up the army image: fauj and vardi.",
+   "songLink": "https://www.youtube.com/watch?v=vR16Gu-Uq00",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H7",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "identify the song (scene history)",
+   "lead": "",
+   "bar": null,
+   "prompt": "In September 2020, KR$NA said the IPL 2020 anthem copied one of his earlier songs. Which song?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Jaanta Kyun"
+    },
+    {
+     "key": "B",
+     "text": "Dekh Kaun Aaya Wapas"
+    },
+    {
+     "key": "C",
+     "text": "Quarantine"
+    },
+    {
+     "key": "D",
+     "text": "Vyanjan"
+    }
+   ],
+   "answer": "B",
+   "explanation": "He pointed to \"Dekh Kaun Aaya Wapas\" (first uploaded March 2017); the anthem was \"Aayenge Hum Waapas\". Its composer, Pranav Ajayrao Malpe, denied copying, and no final outcome was found in the press.",
+   "songLink": "https://music.apple.com/in/artist/kr%24na/1462405977",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H8",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "producers and beats",
+   "lead": "",
+   "bar": null,
+   "prompt": "\"Boom Shaka\" (28 Apr 2026), KR$NA's song with Haryanvi artist Dhanda Nyoliwala, was produced by which pair?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Hisab and Phenom"
+    },
+    {
+     "key": "B",
+     "text": "Karan Kanchan and Lambo Drive"
+    },
+    {
+     "key": "C",
+     "text": "Umair and Calm"
+    },
+    {
+     "key": "D",
+     "text": "Deep Kalsi and SubSpace"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Hisab and Phenom produced it. Phenom also made \"Vibrate\", his song with Badshah on *Yours Truly*.",
+   "songLink": "https://www.youtube.com/watch?v=cL0KKSPjZf8",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H9",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "From the P section of \"Vyanjan\" (2016)",
+   "bar": [
+    "Peene peh pabandi, Patna meh pakde toh panga",
+    "Paaji pehne pagdi, Panjab meh pade panja"
+   ],
+   "prompt": "Patna is the capital of Bihar. Which 2016 news from Bihar does the first bar most likely point to?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Bihar banned the sale and drinking of all liquor"
+    },
+    {
+     "key": "B",
+     "text": "Bihar raised its legal drinking age to 25"
+    },
+    {
+     "key": "C",
+     "text": "Bihar banned drinking only in public places"
+    },
+    {
+     "key": "D",
+     "text": "Bihar cut the tax on liquor"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Bihar banned the sale and drinking of liquor in April 2016. \"Peene peh pabandi\" means a ban on drinking, so if you get caught in Patna, you are in trouble. The next bar moves to Punjab and stays on P. KR$NA has not explained this line. The reading rests on \"peene peh pabandi\" and \"Patna\".",
+   "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H10",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (awards)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which KR$NA collaboration won Best Indie Collaboration at the Radio City Freedom Awards (Season 7, March 2023)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\"Roll Up\" with Badshah"
+    },
+    {
+     "key": "B",
+     "text": "\"Forever\" with Brodha V"
+    },
+    {
+     "key": "C",
+     "text": "\"10 Pe 10\" with French the Kid"
+    },
+    {
+     "key": "D",
+     "text": "\"Zero After Zero\" with KSHMR"
+    }
+   ],
+   "answer": "B",
+   "explanation": "Brodha V and KR$NA won for \"Forever\" (Brodha V's single, Sept 2022). The winners were announced online on 31 March 2023.",
+   "songLink": "https://music.apple.com/in/album/forever-feat-kr%24na-single/1642877828",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H11",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "In Calm's verse on \"Hola Amigo\", his crew",
+   "bar": [
+    "...scan kare QR se pehle jaise L. M. N. O. P."
+   ],
+   "prompt": "Why L, M, N, O, P?",
+   "options": [
+    {
+     "key": "A",
+     "text": "They come just before Q and R"
+    },
+    {
+     "key": "B",
+     "text": "His crew members' initials"
+    },
+    {
+     "key": "C",
+     "text": "Five Delhi Metro lines"
+    },
+    {
+     "key": "D",
+     "text": "The order a QR code is read"
+    }
+   ],
+   "answer": "A",
+   "explanation": "In the alphabet, L-M-N-O-P sit right before Q-R. So his boys \"scan\" you before the QR code can: they are a step ahead. \"QR\" is both a phone code and two letters.",
+   "songLink": "https://www.youtube.com/watch?v=De9VIp37CjY",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H12",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (early career)",
+   "lead": "",
+   "bar": null,
+   "prompt": "KR$NA says that after the first *Sellout* video, his label offered only a 10,000-rupee Facebook ad plan. How was the title-track video paid for?",
+   "options": [
+    {
+     "key": "A",
+     "text": "With his own advance"
+    },
+    {
+     "key": "B",
+     "text": "The label raised its budget"
+    },
+    {
+     "key": "C",
+     "text": "A clothing brand sponsored it"
+    },
+    {
+     "key": "D",
+     "text": "Fans crowdfunded it"
+    }
+   ],
+   "answer": "A",
+   "explanation": "He paid for the *Sellout* title-track video out of his own advance. It was an early sign of the do-it-yourself streak in his career.",
+   "songLink": "https://music.apple.com/in/album/sellout/1444104236",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H13",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (labels)",
+   "lead": "",
+   "bar": null,
+   "prompt": "After *Sellout* (2014, Universal Music), KR$NA co-founded a small hip-hop label with a friend. What was it called?",
+   "options": [
+    {
+     "key": "A",
+     "text": "AK Projekts"
+    },
+    {
+     "key": "B",
+     "text": "Right Now Entertainment"
+    },
+    {
+     "key": "C",
+     "text": "Azadi Records"
+    },
+    {
+     "key": "D",
+     "text": "Mass Appeal India"
+    }
+   ],
+   "answer": "B",
+   "explanation": "He co-founded Right Now Entertainment with a friend, and it later went dormant. AK Projekts is the company that became Kalamkaar.",
+   "songLink": "https://music.apple.com/in/artist/kr%24na/1462405977",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H14",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (find the rhyme)",
+   "lead": "In the third verse of \"Hola Amigo\"",
+   "bar": [
+    "Tere idols ka idol main Jackson Micheal, higher than Eiffel"
+   ],
+   "prompt": "What does flipping the name to \"Jackson Micheal\" do for the bar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Puts \"Micheal\" on the rhyme with \"Eiffel\""
+    },
+    {
+     "key": "B",
+     "text": "Makes \"Jackson\" rhyme with \"idols\""
+    },
+    {
+     "key": "C",
+     "text": "Turns the name into a Hindi pun"
+    },
+    {
+     "key": "D",
+     "text": "Breaks the rhyme for a pause"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Said \"Maikal\", the name lands on the same sound as \"Eiffel\", and the chain runs on through \"survival\", \"recycled\" and \"cycle\". In the usual order, \"Jackson\" would sit on the rhyme and break it.",
+   "songLink": "https://www.youtube.com/watch?v=De9VIp37CjY",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "H15",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "albums and discography (deep cut)",
+   "lead": "",
+   "bar": null,
+   "prompt": "*Yours Truly* (2025) has skits between the songs. Where does their audio come from?",
+   "options": [
+    {
+     "key": "A",
+     "text": "An old episode of the podcast *VOTP*"
+    },
+    {
+     "key": "B",
+     "text": "Fans' voice notes after *Still Here*"
+    },
+    {
+     "key": "C",
+     "text": "Clips from his old TV interviews"
+    },
+    {
+     "key": "D",
+     "text": "Phone calls with Nas"
+    }
+   ],
+   "answer": "A",
+   "explanation": "The four \"VOTP SKIT\" tracks use a 2015 episode of the podcast *VOTP* (*Voice of the People*), in which the hosts, rappers Bobkat and Enkore, talked about his career. The title track also looks back: two letters to himself at three stages of life.",
+   "songLink": "https://music.apple.com/in/album/yours-truly/1814144078",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
   {
    "id": "Q1",
    "reserve": false,
@@ -33,7 +571,9 @@
    "answer": "B",
    "explanation": "KR$NA is Krishna Kaul. He rapped as Young Prozpekt, then Prozpekt, before he became KR$NA.",
    "songLink": "https://music.apple.com/in/artist/kr%24na/1462405977",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q2",
@@ -66,7 +606,9 @@
    "answer": "C",
    "explanation": "\"Joota Japani\" turns Mukesh's \"Mera Joota Hai Japani\" into a rap hook. KR$NA called it \"a mix of old and new\".",
    "songLink": "https://www.youtube.com/watch?v=vR16Gu-Uq00",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q3",
@@ -99,7 +641,9 @@
    "answer": "A",
    "explanation": "\"BUZZ\" is a Seedhe Maut and KR$NA single on Mass Appeal, produced by Seedhe Maut's own Calm.",
    "songLink": "https://music.apple.com/in/album/buzz-single/6825203053",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q4",
@@ -135,7 +679,9 @@
    "answer": "B",
    "explanation": "Almost every word starts with \"k\" (क). The whole song gives each Hindi consonant its own section, like a school lesson.",
    "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q5",
@@ -171,7 +717,9 @@
    "answer": "C",
    "explanation": "Spanish (\"hola amigo\"), Hindi (\"kaise ho, theek ho\") and British English slang (\"bruv\"). That is code-switching for effect. KR$NA said the hook \"sounded funny in the moment\", so he kept it.",
    "songLink": "https://www.youtube.com/watch?v=De9VIp37CjY",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q6",
@@ -204,7 +752,9 @@
    "answer": "D",
    "explanation": "He made *Sellout* in about two and a half months. His next album, *Still Here*, did not come until 2021.",
    "songLink": "https://music.apple.com/in/album/sellout/1444104236",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q7",
@@ -237,7 +787,9 @@
    "answer": "A",
    "explanation": "Badshah is on both: \"Roll Up\" on *Still Here* (2021) and \"Vibrate\" on *Yours Truly* (2025).",
    "songLink": "https://music.apple.com/in/album/yours-truly/1814144078",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q8",
@@ -273,7 +825,9 @@
    "answer": "B",
    "explanation": "Mukesh sang of an English patloon and a Russian red topi. KR$NA keeps Japan and the Indian heart, swaps the rest for Armani and Gucci, and keeps the \"-aani\" rhyme.",
    "songLink": "https://www.youtube.com/watch?v=vR16Gu-Uq00",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q9",
@@ -306,7 +860,9 @@
    "answer": "D",
    "explanation": "Raftaar and Ankit Khanna founded it. KR$NA joined when it was still called AK Projekts.",
    "songLink": "https://music.apple.com/us/album/sensitive/1814144078",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q10",
@@ -339,7 +895,9 @@
    "answer": "C",
    "explanation": "Mass Appeal is Nas's label. The news came after Nas's first India show, a Mumbai charity concert on 19 Apr 2025, where KR$NA also performed. *Yours Truly* (22 May 2025) came out on Mass Appeal.",
    "songLink": "https://music.apple.com/us/album/sensitive/1814144078",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q11",
@@ -372,7 +930,9 @@
    "answer": "A",
    "explanation": "Umair, a Pakistani producer, flipped the 1955 original into a drill beat.",
    "songLink": "https://www.youtube.com/watch?v=vR16Gu-Uq00",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q12",
@@ -390,25 +950,27 @@
    "options": [
     {
      "key": "A",
-     "text": "A simile that compares his heart to his crew"
+     "text": "A simile comparing heart and crew"
     },
     {
      "key": "B",
-     "text": "A slant rhyme, where the vowels differ"
+     "text": "A slant rhyme with different vowels"
     },
     {
      "key": "C",
-     "text": "A bilingual pun: one sound, a Hindi word and an English slang word"
+     "text": "A bilingual pun: one sound, two languages"
     },
     {
      "key": "D",
-     "text": "Hyperbole about how big his crew is"
+     "text": "Hyperbole about his crew's size"
     }
    ],
    "answer": "C",
    "explanation": "\"Ji\" is Hindi (heart, or a term of respect) and \"G\" is English slang for a close friend. They sound the same, and the ad-libs repeat both to make the pun obvious.",
    "songLink": "https://www.youtube.com/watch?v=De9VIp37CjY",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q13",
@@ -441,7 +1003,9 @@
    "answer": "D",
    "explanation": "\"Kaisa Mera Desh\" was an anti-corruption song about the CWG scam, which shows he wrote political rap long before \"Vyanjan\".",
    "songLink": "https://www.youtube.com/watch?v=tBy-sJVPErE",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q14",
@@ -459,25 +1023,27 @@
    "options": [
     {
      "key": "A",
-     "text": "Both rappers are guests on the original version of the song"
+     "text": "Both are guests on the song"
     },
     {
      "key": "B",
-     "text": "The section's rule is that every word starts with the letter's sound, and both names start with that T sound"
+     "text": "Their names start with the same hard T"
     },
     {
      "key": "C",
-     "text": "They are the only English words in the song"
+     "text": "They're the only English words in it"
     },
     {
      "key": "D",
-     "text": "The T section is a list of his influences, so the letter rule does not apply there"
+     "text": "The letter rule pauses for his influences"
     }
    ],
    "answer": "B",
    "explanation": "The rule holds by sound, not by script. Said aloud, both English names start with the same hard T as \"topi\", \"takla\" and \"tedi\". \"2Pac\" even starts with a number. This is \"sound over spelling\".",
    "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "Q15",
@@ -510,7 +1076,9 @@
    "answer": "A",
    "explanation": "KR$NA is on Seedhe Maut's \"Khatta Flow\" (*Lunch Break*, 19 Aug 2023), and Seedhe Maut are on his \"Hola Amigo\" (*FAR FROM OVER*, 29 Aug 2023). Both came out in August 2023.",
    "songLink": "https://www.youtube.com/watch?v=De9VIp37CjY",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "R1",
@@ -543,7 +1111,9 @@
    "answer": "B",
    "explanation": "Young Stunners are Talha Anjum and Talhah Yunus. Talhah Yunus is on \"NGL\" and Talha Anjum is on \"Been A While\".",
    "songLink": "https://music.apple.com/in/artist/kr%24na/1462405977",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "R2",
@@ -576,7 +1146,9 @@
    "answer": "D",
    "explanation": "He wrote them before the announcement. They just happened to fit the moment when the video came out.",
    "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "R3",
@@ -609,7 +1181,9 @@
    "answer": "C",
    "explanation": "KR$NA's \"Machayenge 4\" came out on 8 July 2022. Emiway answered with his own \"Machayengey 4\" a few days later, by 12 July 2022.",
    "songLink": "https://music.apple.com/in/album/machayenge-4/1633774723",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "R4",
@@ -644,7 +1218,9 @@
    "answer": "A",
    "explanation": "Both are in Srinagar: Dal Lake, and Zaina Kadal, one of the city's old bridges over the Jhelum. The line uses \"jaise\" to compare his flow to the water there.",
    "songLink": "https://www.youtube.com/watch?v=vR16Gu-Uq00",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   },
   {
    "id": "R5",
@@ -677,7 +1253,10 @@
    "answer": "B",
    "explanation": "Many school charts end the consonants with the joined letters क्ष (ksha), त्र (tra) and ज्ञ (gya), and some add श्र (shra) after them. The song closes on those three: Kshatriya, Trishool, Gyani.",
    "songLink": "https://www.youtube.com/watch?v=CDbeB2-UCcQ",
-   "pending": false
+   "pending": false,
+   "explicit": false,
+   "avoid": []
   }
- ]
+ ],
+ "slug": "krsna"
 }

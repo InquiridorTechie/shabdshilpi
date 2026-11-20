@@ -1,0 +1,1322 @@
+{
+ "round": "seedhe-maut-r1",
+ "artist": "Seedhe Maut",
+ "questions": [
+  {
+   "id": "SM36",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "albums and discography (deep cut)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which of these tracks on *Bayaan* (2018) is a skit, not a full song?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Jolly"
+    },
+    {
+     "key": "B",
+     "text": "Uss Din"
+    },
+    {
+     "key": "C",
+     "text": "Dehshat"
+    },
+    {
+     "key": "D",
+     "text": "PNP"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Jolly\" is a 23-second skit. *Bayaan* has 9 songs plus an intro and two skits, \"Jolly\" and \"EDOKDOG\". \"Uss Din\", \"Dehshat\" and \"PNP\" are full songs.",
+   "songLink": "https://music.apple.com/in/album/bayaan/1804729497",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM37",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "On \"Nanchaku\"",
+   "bar": [
+    "Yaha billi nikli hajj par",
+    "Nigla use vaha pe ek ajgar"
+   ],
+   "prompt": "The bar twists an old saying. What does the original saying mock?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A sinner's sudden show of piety"
+    },
+    {
+     "key": "B",
+     "text": "Pride that comes before a fall"
+    },
+    {
+     "key": "C",
+     "text": "Greed that always gets punished"
+    },
+    {
+     "key": "D",
+     "text": "A long journey that ends badly"
+    }
+   ],
+   "answer": "A",
+   "explanation": "The saying is \"nau sau chuhe kha ke billi hajj ko chali\": after eating 900 rats, the cat goes on Hajj. It mocks a sinner who suddenly acts holy. The bar keeps the set-up and adds its own payoff: a python swallows the cat.",
+   "songLink": "https://www.youtube.com/watch?v=3beb3HXqCms",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM1",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "identify the artist (clue card)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Clue card. Real name Siddhant Sharma. Produced most of *Lunch Break* (2023). Dropped a solo tape, *PentHouse Tapes, Vol. 1*, in Feb 2026. Who is it?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "B",
+     "text": "Calm"
+    },
+    {
+     "key": "C",
+     "text": "Sez on the Beat"
+    },
+    {
+     "key": "D",
+     "text": "Hurricane"
+    }
+   ],
+   "answer": "B",
+   "explanation": "Calm is Siddhant Sharma. He raps and makes beats, and he produced most of the 30-track *Lunch Break*.",
+   "songLink": "https://music.apple.com/in/album/1875343978",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM2",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "slang and references",
+   "lead": "",
+   "bar": null,
+   "prompt": "Taken word for word, what does \"Seedhe Maut\" mean?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Straight to death"
+    },
+    {
+     "key": "B",
+     "text": "Death on the streets"
+    },
+    {
+     "key": "C",
+     "text": "Straight from the heart"
+    },
+    {
+     "key": "D",
+     "text": "Sudden death"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It means \"straight to death\", used like \"sick\" or \"dope\". The duo say it means no half measures: give everything to what you start.",
+   "songLink": "https://music.apple.com/in/artist/seedhe-maut/1233336608",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM3",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "identify the song (description)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which Seedhe Maut song is this? A July 2021 single with MC Stan, later on the mixtape *न*, named after a martial-arts weapon.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Nanchaku"
+    },
+    {
+     "key": "B",
+     "text": "Namastute"
+    },
+    {
+     "key": "C",
+     "text": "Dum Pishaach"
+    },
+    {
+     "key": "D",
+     "text": "Shaktimaan"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Nanchaku\" (23 Jul 2021) is the song's spelling of nunchaku, two sticks joined by a chain. Wild City said each rapper \"offers a different flow\" on it.",
+   "songLink": "https://www.youtube.com/watch?v=3beb3HXqCms",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM4",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "scene history",
+   "lead": "",
+   "bar": null,
+   "prompt": "Where did Encore ABJ and Calm first meet?",
+   "options": [
+    {
+     "key": "A",
+     "text": "SPIT DOPE, a Delhi cypher night"
+    },
+    {
+     "key": "B",
+     "text": "A Delhi University college fest"
+    },
+    {
+     "key": "C",
+     "text": "An Azadi Records studio session"
+    },
+    {
+     "key": "D",
+     "text": "MTV Hustle auditions"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Encore co-founded SPIT DOPE, a Delhi night of cyphers and rap battles. Vice says he met Calm at its first session, in 2016.",
+   "songLink": "https://music.apple.com/in/artist/seedhe-maut/1233336608",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM5",
+   "reserve": false,
+   "kind": "bar",
+   "level": "easy",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "Encore ABJ on \"Khatta Flow\"",
+   "bar": [
+    "Feel like kaif",
+    "Teri fielding galat hai"
+   ],
+   "prompt": "Why does \"fielding\" follow \"Kaif\"?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Kaif was famed for his fielding"
+    },
+    {
+     "key": "B",
+     "text": "Kaif was India's wicketkeeper"
+    },
+    {
+     "key": "C",
+     "text": "Kaif was a leg-spinner"
+    },
+    {
+     "key": "D",
+     "text": "Kaif was a fast bowler"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Mohammad Kaif was one of India's best outfielders. Encore is the expert, and his rival keeps misfielding.",
+   "songLink": "https://www.youtube.com/watch?v=qVcHlaFZf6A",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM6",
+   "reserve": false,
+   "kind": "bar",
+   "level": "easy",
+   "seconds": 40,
+   "type": "lyric craft (simile or metaphor)",
+   "lead": "Encore ABJ on \"Namastute\"",
+   "bar": [
+    "Ulte paao bhagte ye saare jaise (Pret sab)"
+   ],
+   "prompt": "Simile or metaphor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Simile (upma)"
+    },
+    {
+     "key": "B",
+     "text": "Metaphor (rupak)"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Jaise\" (like) marks a simile. In North Indian folklore, backward feet are a ghost's sign, so his rivals run off like ghosts.",
+   "songLink": "https://www.youtube.com/watch?v=YuWUJg3Kdks",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM7",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "identify the artist (clue card)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Clue card. Real name Abhijay Negi. Says he found Eminem at about age 11 to 13. In 2023 he said: \"There's a reason TBSM4L is a thing.\" Who is it?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Calm"
+    },
+    {
+     "key": "B",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "C",
+     "text": "Prabh Deep"
+    },
+    {
+     "key": "D",
+     "text": "Hurricane"
+    }
+   ],
+   "answer": "B",
+   "explanation": "Encore ABJ is Abhijay Negi, one half of Seedhe Maut with Calm.",
+   "songLink": "https://music.apple.com/in/album/nayaab/1804725962",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM8",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "producers and beats",
+   "lead": "",
+   "bar": null,
+   "prompt": "Their debut album *Bayaan* (Dec 2018) is co-credited to Seedhe Maut and which producer?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Karan Kanchan"
+    },
+    {
+     "key": "B",
+     "text": "Hurricane"
+    },
+    {
+     "key": "C",
+     "text": "Sez on the Beat"
+    },
+    {
+     "key": "D",
+     "text": "Jawan"
+    }
+   ],
+   "answer": "C",
+   "explanation": "Apple Music credits *Bayaan* to \"Seedhe Maut & Sez on the Beat\". Before release, Rolling Stone India reported that Sez was producing the whole album. They shared the credit again on *Nayaab* (2022).",
+   "songLink": "https://music.apple.com/in/album/bayaan/1804729497",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM9",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "scene history (labels)",
+   "lead": "",
+   "bar": null,
+   "prompt": "*Bayaan*, *न*, *Nayaab* and *Lunch Break* all came out on one label, which the duo left in 2023. Which label?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Gully Gang"
+    },
+    {
+     "key": "B",
+     "text": "Azadi Records"
+    },
+    {
+     "key": "C",
+     "text": "Kalamkaar"
+    },
+    {
+     "key": "D",
+     "text": "Mass Appeal"
+    }
+   ],
+   "answer": "B",
+   "explanation": "Azadi had signed them by April 2018. Rolling Stone India reported that the duo confirmed in 2023 that they had left.",
+   "songLink": "https://music.apple.com/in/album/lunch-break/1703238277",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM10",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "scene history (labels)",
+   "lead": "",
+   "bar": null,
+   "prompt": "The EPs *SHAKTI* and *Kshama* came out on the duo's own label. What is it called?",
+   "options": [
+    {
+     "key": "A",
+     "text": "DL91 Era"
+    },
+    {
+     "key": "B",
+     "text": "MAAL"
+    },
+    {
+     "key": "C",
+     "text": "Kalamkaar"
+    },
+    {
+     "key": "D",
+     "text": "Mass Appeal"
+    }
+   ],
+   "answer": "A",
+   "explanation": "DL91 Era is also on *DL91 FM* (2025) and \"Dilli Jale Roz\" (2026). MAAL is their merch line, not a label.",
+   "songLink": "https://music.apple.com/in/album/shakti-ep/1762198505",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM11",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "collaborations (launch artists)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which launch artist joined \"Swah!\" from *Lunch Break* (2023) as a last-minute feature?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Badshah"
+    },
+    {
+     "key": "B",
+     "text": "Raftaar"
+    },
+    {
+     "key": "C",
+     "text": "Ikka"
+    },
+    {
+     "key": "D",
+     "text": "Honey Singh"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Badshah's verse came in late, on one of Calm's oldest beats. Badshah later put the duo on \"Bajenge\" from his album *Ek Tha Raja* (2024).",
+   "songLink": "https://music.apple.com/in/album/lunch-break/1703238277",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM12",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Who raps this bar on \"Nanchaku\"?",
+   "bar": [
+    "Aur baju apni beat pe ni dhundta type beat"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "B",
+     "text": "Calm"
+    },
+    {
+     "key": "C",
+     "text": "MC Stan"
+    },
+    {
+     "key": "D",
+     "text": "KR$NA"
+    }
+   ],
+   "answer": "B",
+   "explanation": "A \"type beat\" copies a famous rapper's sound. Calm makes Seedhe Maut's own beats (he produced most of *Lunch Break*), so he doesn't need one.",
+   "songLink": "https://www.youtube.com/watch?v=3beb3HXqCms",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "SM3",
+    "SM13"
+   ]
+  },
+  {
+   "id": "SM13",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Only one verse of \"Nanchaku\" says the title",
+   "bar": [
+    "Nanchaku ghumata, banda mei khudaka"
+   ],
+   "prompt": "Who raps it?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "B",
+     "text": "Calm"
+    },
+    {
+     "key": "C",
+     "text": "MC Stan"
+    },
+    {
+     "key": "D",
+     "text": "KR$NA"
+    }
+   ],
+   "answer": "C",
+   "explanation": "The guest says the title, not Seedhe Maut. \"Banda khuda ka\" means God's own man. Stan's verse is the one with Bambaiya forms like \"meko\" and \"kaiku\".",
+   "songLink": "https://www.youtube.com/watch?v=3beb3HXqCms",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "SM3",
+    "SM12"
+   ]
+  },
+  {
+   "id": "SM14",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "Calm on \"Namastute\"",
+   "bar": [
+    "Kuch saanp hain, kareebi baatein",
+    "Jalebi, humse, jale bhi saath hain"
+   ],
+   "prompt": "Which two meanings does \"jalebi / jale bhi\" carry?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sweet talk, and burning with envy"
+    },
+    {
+     "key": "B",
+     "text": "A sweet, and a wedding feast"
+    },
+    {
+     "key": "C",
+     "text": "Sweet talk, and a burning stove"
+    },
+    {
+     "key": "D",
+     "text": "Old friends, and new enemies"
+    }
+   ],
+   "answer": "A",
+   "explanation": "One sound, two meanings (yamak). The snakes talk sweet like jalebi, and they also burn (\"jale bhi\") with jealousy.",
+   "songLink": "https://www.youtube.com/watch?v=YuWUJg3Kdks",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM15",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "KR$NA on \"Khatta Flow\"",
+   "bar": [
+    "Ghoome mere fan har jagah jaise Khaitaan"
+   ],
+   "prompt": "Which two meanings does \"fan\" carry?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Followers, and ceiling fans"
+    },
+    {
+     "key": "B",
+     "text": "Followers, and air coolers"
+    },
+    {
+     "key": "C",
+     "text": "Ceiling fans, and hand fans"
+    },
+    {
+     "key": "D",
+     "text": "Friends, and rivals"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Khaitan makes ceiling fans. \"Ghoome\" means both \"roam\" and \"spin\", so his followers go everywhere and spin like Khaitan fans. One word, two meanings: shlesh.",
+   "songLink": "https://www.youtube.com/watch?v=qVcHlaFZf6A",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM16",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (sound over spelling)",
+   "lead": "Encore ABJ on \"Khatta Flow\"",
+   "bar": [
+    "Bike smack, bike doodh",
+    "Yaha bike har samaan"
+   ],
+   "prompt": "What does \"bike\" mean here?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Gets sold"
+    },
+    {
+     "key": "B",
+     "text": "A motorbike"
+    },
+    {
+     "key": "C",
+     "text": "Gets burned"
+    },
+    {
+     "key": "D",
+     "text": "Gets broken"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It's Hindi \"bi-ke\" (from bikna, to be sold): smack (heroin), milk, everything is for sale. In Roman letters it looks like English \"bike\", but it's said in two syllables. That's sound over spelling.",
+   "songLink": "https://www.youtube.com/watch?v=qVcHlaFZf6A",
+   "pending": false,
+   "explicit": true,
+   "avoid": []
+  },
+  {
+   "id": "SM17",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "live shows",
+   "lead": "",
+   "bar": null,
+   "prompt": "In June 2025, Seedhe Maut played which UK festival?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reading"
+    },
+    {
+     "key": "B",
+     "text": "Wireless"
+    },
+    {
+     "key": "C",
+     "text": "Glastonbury"
+    },
+    {
+     "key": "D",
+     "text": "Download"
+    }
+   ],
+   "answer": "C",
+   "explanation": "They played Glastonbury in June 2025. The same UK trip had sold-out shows in Manchester, Birmingham and London.",
+   "songLink": "https://music.apple.com/in/artist/seedhe-maut/1233336608",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM18",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "scene history (labels)",
+   "lead": "",
+   "bar": null,
+   "prompt": "*Don't Try This At Home* (20 Nov 2026), the joint EP by KR$NA and Seedhe Maut, is on which label?",
+   "options": [
+    {
+     "key": "A",
+     "text": "DL91 Era"
+    },
+    {
+     "key": "B",
+     "text": "Mass Appeal"
+    },
+    {
+     "key": "C",
+     "text": "Azadi Records"
+    },
+    {
+     "key": "D",
+     "text": "Kalamkaar"
+    }
+   ],
+   "answer": "B",
+   "explanation": "It's on Mass Appeal, like their single \"BUZZ\" (Oct 2026). Apple Music lists six songs.",
+   "songLink": "https://music.apple.com/in/album/dont-try-this-at-home-ep/6832975155",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM19",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (launch artists)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Seedhe Maut, Raga and Aghor are all on \"Sanki\" (2022). It closes which launch artist's album?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Raftaar"
+    },
+    {
+     "key": "B",
+     "text": "Ikka"
+    },
+    {
+     "key": "C",
+     "text": "Badshah"
+    },
+    {
+     "key": "D",
+     "text": "KR$NA"
+    }
+   ],
+   "answer": "B",
+   "explanation": "\"Sanki\" closes Ikka's *Nishu* (26 Jul 2022, Kalamkaar), on a beat by Sez on the Beat.",
+   "songLink": "https://music.apple.com/album/1635238523",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM20",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Who raps this bar on \"Khatta Flow\"?",
+   "bar": [
+    "Tryna pull strings",
+    "Tu na Ehsaan Noorani"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "B",
+     "text": "Calm"
+    },
+    {
+     "key": "C",
+     "text": "KR$NA"
+    },
+    {
+     "key": "D",
+     "text": "MC Stan"
+    }
+   ],
+   "answer": "C",
+   "explanation": "It's KR$NA's verse. Ehsaan Noorani is the guitarist of Shankar–Ehsaan–Loy, so \"pull strings\" means both using contacts and playing guitar.",
+   "songLink": "https://www.youtube.com/watch?v=qVcHlaFZf6A",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "SM5",
+    "SM15",
+    "SM16",
+    "SM22",
+    "SM24",
+    "SM35"
+   ]
+  },
+  {
+   "id": "SM21",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "producers and beats",
+   "lead": "",
+   "bar": null,
+   "prompt": "Who produced \"Dikkat\" (from *Lunch Break*, 2023) and the 2023 single \"Tofa\"?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Calm"
+    },
+    {
+     "key": "B",
+     "text": "Sez on the Beat"
+    },
+    {
+     "key": "C",
+     "text": "Hurricane"
+    },
+    {
+     "key": "D",
+     "text": "Karan Kanchan"
+    }
+   ],
+   "answer": "C",
+   "explanation": "Hurricane, whom Rolling Stone India calls their protégé. RS India credits him on \"Dikkat\", and Shazam credits him on \"Tofa\". Calm made most of *Lunch Break*. Hurricane is a lead artist on *DL91 FM* (2025).",
+   "songLink": "https://music.apple.com/in/album/lunch-break/1703238277",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM22",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "KR$NA on \"Khatta Flow\"",
+   "bar": [
+    "I'm John Wick with a weapon, bout to kill ‘em parabellum"
+   ],
+   "prompt": "\"Para bellum\" is Latin. What does it mean?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Prepare for war"
+    },
+    {
+     "key": "B",
+     "text": "Beautiful war"
+    },
+    {
+     "key": "C",
+     "text": "Beyond the battle"
+    },
+    {
+     "key": "D",
+     "text": "War without end"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It's from \"Si vis pacem, para bellum\": if you want peace, prepare for war. The phrase is also the subtitle of *John Wick: Chapter 3* (2019), so he's John Wick, armed and ready.",
+   "songLink": "https://www.youtube.com/watch?v=qVcHlaFZf6A",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM23",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "albums and discography (deep cut)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Seedhe Maut told Rolling Stone India (2018) that a Mumbai rapper has a cameo in their \"Shaktimaan\" video. Who?",
+   "options": [
+    {
+     "key": "A",
+     "text": "DIVINE"
+    },
+    {
+     "key": "B",
+     "text": "Naezy"
+    },
+    {
+     "key": "C",
+     "text": "D'Evil"
+    },
+    {
+     "key": "D",
+     "text": "Emiway Bantai"
+    }
+   ],
+   "answer": "C",
+   "explanation": "D'Evil appears in the video. The duo wrote its script, CanFuse directed it, and it follows a fed-up bank employee.",
+   "songLink": "https://music.apple.com/in/album/bayaan/1804729497",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM24",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Who raps this bar on \"Khatta Flow\"?",
+   "bar": [
+    "Chakku double edge",
+    "Fattu muggle hai"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "B",
+     "text": "Calm"
+    },
+    {
+     "key": "C",
+     "text": "KR$NA"
+    },
+    {
+     "key": "D",
+     "text": "MC Stan"
+    }
+   ],
+   "answer": "B",
+   "explanation": "It's Calm's verse. \"Double\" echoes the start of Encore's verse, and \"muggle\" starts a run of rhymes: struggle, bubble. A muggle is someone with no magic in *Harry Potter*.",
+   "songLink": "https://www.youtube.com/watch?v=qVcHlaFZf6A",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "SM5",
+    "SM15",
+    "SM16",
+    "SM20",
+    "SM22",
+    "SM35"
+   ]
+  },
+  {
+   "id": "SM25",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (labels)",
+   "lead": "",
+   "bar": null,
+   "prompt": "\"Dum Pishaach\" (2020), with producer Karan Kanchan, was the first collaboration between Azadi Records and which label?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Kalamkaar"
+    },
+    {
+     "key": "B",
+     "text": "Gully Gang"
+    },
+    {
+     "key": "C",
+     "text": "T-Series"
+    },
+    {
+     "key": "D",
+     "text": "Sony Music India"
+    }
+   ],
+   "answer": "B",
+   "explanation": "\"Dum Pishaach\" (11 Sep 2020) was a rap-rock song and the first Azadi x Gully Gang release. Karan Kanchan was signed to Gully Gang.",
+   "songLink": "https://www.youtube.com/watch?v=ESAloNQSrPM",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM26",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "albums and discography (deep cut)",
+   "lead": "",
+   "bar": null,
+   "prompt": "The duo made *Lunch Break* (2023) in Goa, as a break from work on which album?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Nayaab"
+    },
+    {
+     "key": "B",
+     "text": "Kavi Kehna Chahte Hain"
+    },
+    {
+     "key": "C",
+     "text": "SHAKTI"
+    },
+    {
+     "key": "D",
+     "text": "Kshama"
+    }
+   ],
+   "answer": "B",
+   "explanation": "\"Kavi\" and \"Kehna Chahte Hain\" on *Lunch Break* are preludes to it. As of 20 Nov 2026, *Kavi Kehna Chahte Hain* is still unreleased.",
+   "songLink": "https://music.apple.com/in/album/lunch-break/1703238277",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM27",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Who raps this bar on \"Namastute\"?",
+   "bar": [
+    "Launde bane chaal baaz",
+    "Tera bhai Karl Marx prophet, dekhe nahi profit"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "B",
+     "text": "Calm"
+    },
+    {
+     "key": "C",
+     "text": "KR$NA"
+    },
+    {
+     "key": "D",
+     "text": "MC Stan"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It's Encore's verse. \"Prophet\" and \"profit\" sound almost the same: a holy messenger who ignores money, in a verse full of worship words.",
+   "songLink": "https://www.youtube.com/watch?v=YuWUJg3Kdks",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "SM6",
+    "SM14",
+    "SM29",
+    "SM33"
+   ]
+  },
+  {
+   "id": "SM28",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (beef, dated facts only)",
+   "lead": "",
+   "bar": null,
+   "prompt": "On 25 Jun 2024, Straight Outta Srinagar (SOS) released \"Blackball\". Which six-minute track did Seedhe Maut release within 24 hours?",
+   "options": [
+    {
+     "key": "A",
+     "text": "11K"
+    },
+    {
+     "key": "B",
+     "text": "TT / Shutdown"
+    },
+    {
+     "key": "C",
+     "text": "Bure Din"
+    },
+    {
+     "key": "D",
+     "text": "Dikkat"
+    }
+   ],
+   "answer": "B",
+   "explanation": "\"TT / Shutdown\" came out within a day, written and produced by Calm and Encore ABJ. Apple Music lists \"TT\" and \"SHUTDOWN\" as two 2024 singles.",
+   "songLink": "https://music.apple.com/in/album/tt-single/1777087271",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM29",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "scene history (bar meets fact)",
+   "lead": "Encore ABJ on \"Namastute\"",
+   "bar": [
+    "Flyer pe MGK saath, kiya Lace Up",
+    "Yaha pe launde bas fly hum (Way up)"
+   ],
+   "prompt": "Which festival listed Seedhe Maut on the same bill as MGK?",
+   "options": [
+    {
+     "key": "A",
+     "text": "NH7 Weekender 2019"
+    },
+    {
+     "key": "B",
+     "text": "VH1 Supersonic 2020"
+    },
+    {
+     "key": "C",
+     "text": "Sunburn 2019"
+    },
+    {
+     "key": "D",
+     "text": "Lollapalooza India 2023"
+    }
+   ],
+   "answer": "B",
+   "explanation": "VH1 Supersonic 2020 in Pune, with MGK as headliner and Seedhe Maut also on the bill. *Lace Up* is also the title of MGK's debut album (2012).",
+   "songLink": "https://www.youtube.com/watch?v=YuWUJg3Kdks",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM30",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "albums and discography (release dates)",
+   "lead": "",
+   "bar": null,
+   "prompt": "The *SHAKTI* EP came out on a national holiday. Which date?",
+   "options": [
+    {
+     "key": "A",
+     "text": "26 Jan 2024"
+    },
+    {
+     "key": "B",
+     "text": "15 Aug 2023"
+    },
+    {
+     "key": "C",
+     "text": "15 Aug 2024"
+    },
+    {
+     "key": "D",
+     "text": "2 Oct 2024"
+    }
+   ],
+   "answer": "C",
+   "explanation": "*SHAKTI* (4 songs, including \"Raat Ki Rani\") came out on Independence Day 2024. *Kshama* followed on 14 Dec 2024.",
+   "songLink": "https://music.apple.com/in/album/shakti-ep/1762198505",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM31",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (deep cut)",
+   "lead": "",
+   "bar": null,
+   "prompt": "The video for \"Bhussi\" (2023), KSHMR's heist song with Seedhe Maut, is based on a bank robbery in which Hindi film?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Dhoom"
+    },
+    {
+     "key": "B",
+     "text": "Aankhen"
+    },
+    {
+     "key": "C",
+     "text": "Special 26"
+    },
+    {
+     "key": "D",
+     "text": "Bunty Aur Babli"
+    }
+   ],
+   "answer": "B",
+   "explanation": "The video recreates a heist from *Aankhen* (2002), with KSHMR as a news reporter. \"Bhussi\" is from KSHMR's album *KARAM*, produced by KSHMR and Karan Kanchan.",
+   "songLink": "https://www.youtube.com/watch?v=_fwc6d7-F4o",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM32",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (awards)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which *Nayaab* song won Best Music Video at the Radio City Freedom Awards (Season 7, March 2023)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Chidiya Udd"
+    },
+    {
+     "key": "B",
+     "text": "Teen Dost"
+    },
+    {
+     "key": "C",
+     "text": "Anaadi"
+    },
+    {
+     "key": "D",
+     "text": "Batti"
+    }
+   ],
+   "answer": "C",
+   "explanation": "\"Anaadi\" won, credited to Seedhe Maut and Sez on the Beat. The winners were announced online on 31 Mar 2023.",
+   "songLink": "https://music.apple.com/in/album/nayaab/1804725962",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM33",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "Encore ABJ on \"Namastute\"",
+   "bar": [
+    "Kase khud ke pech vo bhi bina pechkas"
+   ],
+   "prompt": "What is a \"pechkas\"?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A screwdriver"
+    },
+    {
+     "key": "B",
+     "text": "A spanner"
+    },
+    {
+     "key": "C",
+     "text": "A hammer"
+    },
+    {
+     "key": "D",
+     "text": "A drill"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Pech\" (screw) + \"kas\" (tighten) = \"pechkas\", a screwdriver. He tightened his own screws without one: he fixed himself with no help.",
+   "songLink": "https://www.youtube.com/watch?v=YuWUJg3Kdks",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "SM35",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "In Verse 1, Encore ABJ says he's \"the one\", jaise Neo. Calm, in Verse 2",
+   "bar": [
+    "Bitch I'm the one jaise Jet Li"
+   ],
+   "prompt": "What links the two picks?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Each is tied to \"The One\""
+    },
+    {
+     "key": "B",
+     "text": "Both are Keanu Reeves roles"
+    },
+    {
+     "key": "C",
+     "text": "Both trained under Bruce Lee"
+    },
+    {
+     "key": "D",
+     "text": "Both appear in John Wick"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Neo is \"the One\" in *The Matrix*, and Jet Li starred in the 2001 film *The One*. Same set-up, new \"One\": it reads like a callback between the two verses.",
+   "songLink": "https://www.youtube.com/watch?v=qVcHlaFZf6A",
+   "pending": false,
+   "explicit": true,
+   "avoid": []
+  }
+ ],
+ "slug": "seedhe-maut"
+}
