@@ -30,8 +30,8 @@
   const WORDS_PER_SEC = 3, MAX_SECS = 60;
   const wordCount = (q) => [q.lead, ...(q.bar || []), q.prompt, ...q.options.map((o) => o.text)].join(" ").split(/\s+/).filter(Boolean).length;
   const MODES = {
-    normal: { label: "Normal", levels: [["easy", 5], ["medium", 7], ["hard", 3]], bars: [4, 6], secs: { fact: 20, bar: 40 }, think: { fact: 10, bar: 15 }, get key() { return ROUND; } },
-    hardcore: { label: "Hardcore", levels: [["easy", 0], ["medium", 2], ["hard", 13]], bars: [4, 6], secs: { fact: 15, bar: 30 }, think: { fact: 7, bar: 10 }, get key() { return ROUND + "-hc"; } },
+    normal: { label: "Normal", levels: [["easy", 3], ["medium", 5], ["hard", 2]], bars: [3, 4], secs: { fact: 20, bar: 40 }, think: { fact: 10, bar: 15 }, get key() { return ROUND; } },
+    hardcore: { label: "Hardcore", levels: [["easy", 0], ["medium", 1], ["hard", 9]], bars: [3, 4], secs: { fact: 15, bar: 30 }, think: { fact: 7, bar: 10 }, get key() { return ROUND + "-hc"; } },
   };
   let mode = "normal";
   const attemptsKey = () => `ss_${MODES[mode].key}_attempts`;
@@ -48,7 +48,9 @@
       ...data,
       ua: navigator.userAgent.slice(0, 160),
     };
-    if (!CFG.sheetUrl) { console.info("[ss]", row); return; }
+    // Local preview (127.0.0.1 / localhost / file) never writes to the real Sheet.
+    const isLocal = ["127.0.0.1", "localhost", ""].includes(location.hostname);
+    if (!CFG.sheetUrl || isLocal) { console.info("[ss]", row); return; }
     try {
       fetch(CFG.sheetUrl, {
         method: "POST", mode: "no-cors", keepalive: true,
@@ -56,6 +58,105 @@
         body: JSON.stringify(row),
       });
     } catch { /* never block play */ }
+  }
+
+  // ---------- sound: meme clips in site/sounds/ (picked by the founder) ----------
+  // Each moment has a list of clips; they rotate. Clips are trimmed (leading silence, max length) and
+  // volume-matched in code. CFG.memeSounds === false turns every sound off (safety switch).
+  const SOUNDS = {
+    right:   [{ f: "baat-to-sahi-hai.mp3" }, { f: "waah-kya-scene-hai.mp3" }, { f: "kya-baat-hai-sir.mp3", max: 2.2 }],
+    wrong:   [{ f: "aayein-meme.mp3" }, { f: "faaah.mp3" }, { f: "sadtrombone.swf.mp3", max: 2.2 }, { f: "aisa-mat-karo.mp3", max: 2.2 }],
+    wrongStreak: [{ f: "ye-kya-hai.mp3", max: 2.8 }],
+    fast:    [{ f: "fast-swish.mp3", max: 1.6 }],
+    start:   [{ f: "chaliye-shuru-karte-hai_jD4Gwwq.mp3" }],
+    startHardcore: [{ f: "dun_dun_dun.mp3", max: 2.4 }],
+    timerLow: [{ f: "clock-ticking-sound.mp3", exact: true, vol: 0.5 }],   // starts so its last tick lands on 0
+    endZero: [{ f: "emotional-damage-trimmed.mp3", max: 2.4 }],
+    timeup:  [{ f: "kya-kar-raha-hai-tu.mp3", max: 2.5 }],
+    streak:  [{ f: "cheering.mp3", max: 2.5 }],
+    endHigh: [{ f: "super-smash-bros-bonus-results.mp3", max: 3.5 }],
+    endMid:  [{ f: "aplausos_2.mp3", max: 3 }],
+    endLow:  [{ f: "meme-violin-sad-violin.mp3", max: 3.5 }],
+  };
+  const SFX = (() => {
+    const enabled = CFG.memeSounds !== false;
+    let ctx = null, loading = null;
+    let on = enabled && store.get("ss_sound", true);
+    const buffers = {};   // file -> { buf, start, gain }
+    const turn = {};      // moment -> next index
+    const ac = () => {
+      if (!ctx) { const C = window.AudioContext || window.webkitAudioContext; if (!C) return null; ctx = new C(); }
+      if (ctx.state === "suspended") ctx.resume();
+      return ctx;
+    };
+    // find where the sound starts (skip silence) and a gain that brings every clip to a similar loudness
+    function analyse(buf) {
+      const d = buf.getChannelData(0), n = d.length;
+      let start = 0; while (start < n && Math.abs(d[start]) < 0.02) start++;
+      let end = n - 1; while (end > start && Math.abs(d[end]) < 0.02) end--;
+      let sum = 0, cnt = 0; for (let i = start; i < n; i += 4) { sum += d[i] * d[i]; cnt++; }
+      const rms = Math.sqrt(sum / Math.max(1, cnt)) || 0.1;
+      return { start: start / buf.sampleRate, end: (end + 1) / buf.sampleRate, gain: Math.min(3, 0.12 / rms) };
+    }
+    function preload() {
+      if (loading || !enabled) return loading;
+      const c = ac(); if (!c) return null;
+      const files = [...new Set(Object.values(SOUNDS).flat().map((s) => s.f))];
+      loading = Promise.all(files.map((f) =>
+        fetch("sounds/" + encodeURIComponent(f)).then((r) => r.arrayBuffer())
+          .then((ab) => new Promise((res, rej) => c.decodeAudioData(ab, res, rej)))
+          .then((buf) => { buffers[f] = { buf, ...analyse(buf) }; })
+          .catch(() => { /* a missing clip is simply skipped */ })));
+      return loading;
+    }
+    function playClip(s, skip = 0) {
+      const b = buffers[s.f]; const c = ac(); if (!b || !c) return;
+      const src = c.createBufferSource(), g = c.createGain(), t = c.currentTime + 0.01;
+      const from = b.start + skip;
+      const len = s.exact ? Math.max(0.05, b.end - from) : Math.min(b.buf.duration - b.start, s.max || 2.5);
+      const v = b.gain * 0.9 * (s.vol || 1);
+      g.gain.setValueAtTime(v, t);
+      g.gain.setValueAtTime(v, t + Math.max(0, len - 0.25));
+      g.gain.linearRampToValueAtTime(0.0001, t + len);          // fade out at the cut
+      src.buffer = b.buf; src.connect(g); g.connect(c.destination);
+      src.start(t, from, len + 0.05);
+      return () => { try { g.gain.cancelScheduledValues(c.currentTime); g.gain.setValueAtTime(0.0001, c.currentTime); src.stop(); } catch { /* already stopped */ } };
+    }
+    let ticking = null;   // stopper for the clock-ticking clip
+    const stopTick = () => { if (ticking) { ticking(); ticking = null; } };
+    function moment(name, keep, skip) {
+      if (!on) return;
+      const list = SOUNDS[name]; if (!list || !list.length) return;
+      const i = (turn[name] || 0) % list.length; turn[name] = i + 1;
+      (preload() || Promise.resolve()).then(() => { const stop = playClip(list[i], skip); if (keep) keep(stop); });
+    }
+    // how long the ticking clip really is (audible part only), so the timer can start it at the right moment
+    const tickSecs = () => { const b = buffers[SOUNDS.timerLow[0].f]; return b ? b.end - b.start : 3; };
+    return {
+      enabled,
+      unlock() { if (on) preload(); },
+      get on() { return on; },
+      toggle() { on = !on; store.set("ss_sound", on); if (on) preload(); return on; },
+      start(mode) { moment(mode === "hardcore" ? "startHardcore" : "start"); },
+      tickSecs,
+      // remainSecs: time left when called; if we're a little late, skip into the clip so it still ends at 0
+      timerLow(remainSecs) { stopTick(); moment("timerLow", (stop) => { ticking = stop; }, Math.max(0, tickSecs() - remainSecs)); },
+      // a right answer: every 3rd in a row = cheering; a very fast one (< 3s) = swish; else the usual rotation
+      right(streak, ms) { stopTick(); moment(streak >= 3 && streak % 3 === 0 ? "streak" : ms < 3000 ? "fast" : "right"); },
+      // 3 wrong in a row = "ye kya hai"
+      wrong(wrongs) { stopTick(); moment(wrongs >= 3 && wrongs % 3 === 0 ? "wrongStreak" : "wrong"); },
+      timeout(wrongs) { stopTick(); moment(wrongs >= 3 && wrongs % 3 === 0 ? "wrongStreak" : "timeup"); },
+      stop: stopTick,
+      finish(score, n) { stopTick(); moment(score === 0 ? "endZero" : score / n >= 0.7 ? "endHigh" : score / n >= 0.4 ? "endMid" : "endLow"); },
+    };
+  })();
+
+  function initSoundButton() {
+    const b = $("btn-sound");
+    if (!SFX.enabled) { b.hidden = true; return; }
+    const paint = () => { b.textContent = SFX.on ? "🔊" : "🔇"; b.setAttribute("aria-label", SFX.on ? "Sound on. Tap to mute." : "Sound off. Tap to turn on."); b.setAttribute("aria-pressed", String(SFX.on)); };
+    b.addEventListener("click", () => { SFX.toggle(); paint(); });
+    paint();
   }
 
   // ---------- helpers ----------
@@ -74,7 +175,7 @@
     for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
     return a;
   };
-  // Pick 15 from the pool by the mode's level mix (easy to hard, shuffled inside each level),
+  // Pick 10 from the pool by the mode's level mix (easy to hard, shuffled inside each level),
   // with 4-6 bar questions. If a level runs short, the gap is filled from the next level down.
   // Options are shuffled too (number-only options stay in order).
   function buildRound() {
@@ -127,7 +228,9 @@
     $("btn-hardcore").addEventListener("click", () => startRound("hardcore"));
   }
 
+  let streak = 0, wrongs = 0;
   function startRound(m) {
+    SFX.unlock(); streak = 0; wrongs = 0;
     if (m) mode = m;
     attempt = store.get(attemptsKey(), 0) + 1;
     document.body.classList.toggle("is-hardcore", mode === "hardcore");
@@ -135,6 +238,7 @@
     store.set(nameKey, playerName);
     idx = 0; score = 0; results = []; locked = false;
     questions = buildRound();
+    SFX.start(mode);
     $("score-live").textContent = "0";
     send("start", { answers: questions.map((q) => q.id).join(" ") });
     show("screen-quiz");
@@ -192,6 +296,7 @@
     const fill = $("timer-fill");
     const left = $("timer-left");
     fill.classList.remove("is-low");
+    let tickStarted = false;
     qStart = performance.now();
     const total = seconds * 1000;
     let lastWhole = -1;
@@ -206,6 +311,7 @@
         if (whole === 10 || whole === 5) $("timer-sr").textContent = `${whole} seconds left`;
       }
       if (remain <= 5000) fill.classList.add("is-low");
+      if (!tickStarted && remain <= SFX.tickSecs() * 1000) { tickStarted = true; SFX.timerLow(remain / 1000); }
       if (remain <= 0) { answer(null); return; }
       timer = requestAnimationFrame(tick);
     };
@@ -221,6 +327,9 @@
     const ms = Math.round(performance.now() - qStart);
     const correct = key === q.answer;
     if (correct) score++;
+    streak = correct ? streak + 1 : 0;
+    wrongs = correct ? 0 : wrongs + 1;
+    if (correct) SFX.right(streak, ms); else if (key === null) SFX.timeout(wrongs); else SFX.wrong(wrongs);
     $("score-live").textContent = score;
     results.push({ id: q.id, choice: key, correct, ms, timedOut: key === null });
     send("answer", { q: q.id, choice: key ?? "timeout", correct, ms });
@@ -295,6 +404,7 @@
   }
 
   function finish() {
+    SFX.finish(score, questions.length);
     const n = questions.length;
     const totalMs = results.reduce((a, r) => a + r.ms, 0);
     const first = store.get(firstKey(), null);
@@ -443,6 +553,7 @@
     });
   }
 
+  initSoundButton();
   fetch("data/artists.json", { cache: "no-store" })
     .then((r) => r.json())
     .then(({ artists }) => {

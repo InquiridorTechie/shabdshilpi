@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Shabdshilpi · DHH Quiz</title>
-  <meta name="description" content="15 sawaal. Timer on. How well do you know your favourite rapper's bars?">
+  <meta name="description" content="10 sawaal. Timer on. How well do you know your favourite rapper's bars?">
   <meta name="theme-color" content="#0c0c0e">
   <meta property="og:title" content="Shabdshilpi · DHH Quiz">
-  <meta property="og:description" content="15 sawaal. Timer on. How well do you know your favourite rapper's bars?">
+  <meta property="og:description" content="10 sawaal. Timer on. How well do you know your favourite rapper's bars?">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kalam:wght@400;700&family=Mukta:wght@400;600;800&family=Rozha+One&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23e8ff3c%22/%3E%3Ctext x=%2250%22 y=%2272%22 font-size=%2266%22 text-anchor=%22middle%22 font-family=%22serif%22 fill=%22%230c0c0e%22%3E%E0%A4%B6%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=202611211655">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -22,7 +22,10 @@
       <span class="brand-dev" lang="hi">शब्दशिल्पी</span>
       <span class="brand-lat">Shabdshilpi</span>
     </div>
-    <span class="sticker">Alpha</span>
+    <div class="top-right">
+      <button id="btn-sound" class="sound-btn" type="button" aria-pressed="true">🔊</button>
+      <span class="sticker">Alpha</span>
+    </div>
   </header>
 
   <main id="app" class="app">
@@ -51,7 +54,7 @@
       <p class="tagline">Facts, bars, aur thoda wordplay. Kitna jaante ho?</p>
 
       <ul class="chips">
-        <li><b>15</b> sawaal</li>
+        <li><b>10</b> sawaal</li>
         <li><b>20s</b> facts · <b>40s</b> bars</li>
         <li>No sign-up</li>
       </ul>
@@ -81,7 +84,7 @@
     <!-- QUESTION -->
     <section id="screen-quiz" class="screen" aria-live="polite">
       <div class="hud">
-        <div class="counter"><span id="q-num">01</span><span class="of">/15</span></div>
+        <div class="counter"><span id="q-num">01</span><span class="of">/10</span></div>
         <div class="meta">
           <span id="q-kind" class="tag">Fact</span>
           <span id="q-level" class="tag tag-ghost">Easy</span>
@@ -126,7 +129,7 @@
     <section id="screen-result" class="screen" aria-labelledby="result-title">
       <p class="kicker" id="result-kicker"></p>
       <div class="scoreboard">
-        <div class="big-score"><span id="final-score">0</span><span class="of">/15</span></div>
+        <div class="big-score"><span id="final-score">0</span><span class="of">/10</span></div>
         <h2 id="result-title" class="rank">Scene Mein Hai</h2>
         <p id="result-sub" class="muted"></p>
       </div>
@@ -201,7 +204,7 @@
     <p>Fan-made quiz. Bars quoted briefly for discussion; full songs on the artists' official channels.</p>
   </footer>
 
-  <script src="config.js"></script>
-  <script src="app.js"></script>
+  <script src="config.js?v=202611211655"></script>
+  <script src="app.js?v=202611211655"></script>
 </body>
 </html>

@@ -1,0 +1,1502 @@
+{
+ "round": "divine-r1",
+ "artist": "DIVINE",
+ "questions": [
+  {
+   "id": "DV37",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "producers and beats",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which producer made the beat for \"Kaam 25\" (2018), DIVINE's song for *Sacred Games*?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Phenom"
+    },
+    {
+     "key": "B",
+     "text": "Karan Kanchan"
+    },
+    {
+     "key": "C",
+     "text": "Stunnah Beatz"
+    },
+    {
+     "key": "D",
+     "text": "Nucleya"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Phenom (Pinaki Rattan) made it. Scroll praised how the production matches the menace in the lyrics. Genius also lists DIVINE as co-producer.",
+   "songLink": "https://www.youtube.com/watch?v=ATf05n5LBHQ",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV38",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (milestones)",
+   "lead": "",
+   "bar": null,
+   "prompt": "In February 2019, DIVINE became the first Indian guest on which host's Beats 1 radio show?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ebro Darden"
+    },
+    {
+     "key": "B",
+     "text": "Zane Lowe"
+    },
+    {
+     "key": "C",
+     "text": "Julie Adenuga"
+    },
+    {
+     "key": "D",
+     "text": "Funkmaster Flex"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It was Ebro Darden's show, at Apple's LA studio; RS India and Gulf News call DIVINE its first Indian guest. Zane Lowe and Julie Adenuga were Beats 1's other launch hosts.",
+   "songLink": "https://music.apple.com/in/artist/divine/1086309021",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV39",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (US artists)",
+   "lead": "",
+   "bar": null,
+   "prompt": "On *Gunehgar* (2022), which US rapper features on \"Traffic Jam\"?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Jadakiss"
+    },
+    {
+     "key": "B",
+     "text": "Russ"
+    },
+    {
+     "key": "C",
+     "text": "Dave East"
+    },
+    {
+     "key": "D",
+     "text": "Pusha T"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Jadakiss is on \"Traffic Jam\". Russ is on \"Bornfire\" from the same album. Dave East was on \"Remand\" (*Kohinoor*), and Pusha T on \"Jungle Mantra\".",
+   "songLink": "https://music.apple.com/in/album/gunehgar/1653647754",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV23",
+    "DV23"
+   ]
+  },
+  {
+   "id": "DV40",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (music videos)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Where was the video for \"100 Million\" (2024), DIVINE's first song with Karan Aujla, shot?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Dubai"
+    },
+    {
+     "key": "B",
+     "text": "Toronto"
+    },
+    {
+     "key": "C",
+     "text": "London"
+    },
+    {
+     "key": "D",
+     "text": "Los Angeles"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It was shot in Dubai, directed by Rupan Bal and team. The song came out on 18 Jan 2024; Aujla called it a birthday gift to fans. It was DIVINE's top song on Apple Music (Nov 2026).",
+   "songLink": "https://www.youtube.com/watch?v=0dXiVYq8HBc",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV41",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "DIVINE on \"3:59 AM\"",
+   "bar": [
+    "Main karte rahoonga grind jab tak 6 men de haath"
+   ],
+   "prompt": "Who are the \"6 men\"?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pallbearers carrying his coffin"
+    },
+    {
+     "key": "B",
+     "text": "His crew backing him up"
+    },
+    {
+     "key": "C",
+     "text": "Six cops putting cuffs on"
+    },
+    {
+     "key": "D",
+     "text": "Judges at a rap battle"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Until six men lend a hand\" means until six men carry his coffin: he'll grind till the day he dies. \"6 men\" also keeps the rhyme with \"lame men\" and \"real men\" in the bars before.",
+   "songLink": "https://www.youtube.com/watch?v=eHyl9KG9RWA",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV1",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "identify the artist (clue card)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Clue card. Grew up in Sahar, then the JB Nagar slums of Andheri East. First crew: Mumbai's Finest. What is DIVINE's real name?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Vivian Fernandes"
+    },
+    {
+     "key": "B",
+     "text": "Vincent Fernandes"
+    },
+    {
+     "key": "C",
+     "text": "Vivian D'Souza"
+    },
+    {
+     "key": "D",
+     "text": "Victor D'Mello"
+    }
+   ],
+   "answer": "A",
+   "explanation": "DIVINE is Vivian Fernandes. He moved to JB Nagar at about age 10, and rapped in English with Mumbai's Finest before switching to Hindi.",
+   "songLink": "https://music.apple.com/in/artist/divine/1086309021",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV2",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "scene history (Gully Boy)",
+   "lead": "",
+   "bar": null,
+   "prompt": "At the 65th Filmfare Awards (2020), DIVINE and Ankur Tewari won Best Lyrics for which *Gully Boy* song?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Apna Time Aayega"
+    },
+    {
+     "key": "B",
+     "text": "Mere Gully Mein"
+    },
+    {
+     "key": "C",
+     "text": "Sher Aaya Sher"
+    },
+    {
+     "key": "D",
+     "text": "Azadi"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Apna Time Aayega\" won Best Lyrics. In the film Ranveer Singh sings it. DIVINE first wrote \"Sabka Time Aayega\"; Javed Akhtar suggested \"Apna\".",
+   "songLink": "https://music.apple.com/hk/album/gully-boy-original-motion-picture-soundtrack/1529556349",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV21",
+    "DV21"
+   ]
+  },
+  {
+   "id": "DV3",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "identify the song (description)",
+   "lead": "",
+   "bar": null,
+   "prompt": "DIVINE made \"Kaam 25\" (June 2018) for which series?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sacred Games"
+    },
+    {
+     "key": "B",
+     "text": "Mirzapur"
+    },
+    {
+     "key": "C",
+     "text": "Paatal Lok"
+    },
+    {
+     "key": "D",
+     "text": "Delhi Crime"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Kaam 25\" was made for Netflix's *Sacred Games*. The press tied the \"25\" to the 25 days Sartaj Singh has to save Mumbai. The official video is on Netflix's YouTube channel.",
+   "songLink": "https://www.youtube.com/watch?v=ATf05n5LBHQ",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV4",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "collaborations",
+   "lead": "",
+   "bar": null,
+   "prompt": "\"Chorni\" came out on 7 Jul 2023, after the death of DIVINE's co-artist on it. Who is the co-artist?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sidhu Moose Wala"
+    },
+    {
+     "key": "B",
+     "text": "Karan Aujla"
+    },
+    {
+     "key": "C",
+     "text": "AP Dhillon"
+    },
+    {
+     "key": "D",
+     "text": "Diljit Dosanjh"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It was Sidhu Moose Wala's fourth posthumous release. Their first song together was \"Moosedrilla\" on *Moosetape* (2021).",
+   "songLink": "https://www.youtube.com/watch?v=seEO3--Sy3c",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV35",
+    "DV35"
+   ]
+  },
+  {
+   "id": "DV5",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "DIVINE opens \"Kaam 25\" with",
+   "bar": [
+    "Kaam 25 hai"
+   ],
+   "prompt": "What does \"Kaam 25\" mean, as the song itself explains?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Game over"
+    },
+    {
+     "key": "B",
+     "text": "The job pays well"
+    },
+    {
+     "key": "C",
+     "text": "Only 25 jobs left"
+    },
+    {
+     "key": "D",
+     "text": "Back to work"
+    }
+   ],
+   "answer": "A",
+   "explanation": "The very next line is \"Bole toh, game over\". \"Bole toh\" is Mumbai street talk for \"in other words\", so \"Kaam 25\" means game over: the job is done, you're finished.",
+   "songLink": "https://www.youtube.com/watch?v=ATf05n5LBHQ",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV6",
+   "reserve": false,
+   "kind": "bar",
+   "level": "easy",
+   "seconds": 40,
+   "type": "lyric craft (simile or metaphor)",
+   "lead": "DIVINE on \"3:59 AM\"",
+   "bar": [
+    "Mujhe game saath dera jaise liya maine saat phera"
+   ],
+   "prompt": "Simile or metaphor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Simile (upma)"
+    },
+    {
+     "key": "B",
+     "text": "Metaphor (rupak)"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Jaise\" (like) marks a simile. The game sticks by him as if he'd taken the seven wedding rounds (saat phere) with it. \"Saath\" (with) and \"saat\" (seven) sit side by side.",
+   "songLink": "https://www.youtube.com/watch?v=eHyl9KG9RWA",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV7",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "identify the artist (name origin)",
+   "lead": "",
+   "bar": null,
+   "prompt": "DIVINE was an altar boy, and his stage name grew out of his first rhymes. What kind of rhymes were they?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Gospel (devotional) rap"
+    },
+    {
+     "key": "B",
+     "text": "Battle-rap disses"
+    },
+    {
+     "key": "C",
+     "text": "English love songs"
+    },
+    {
+     "key": "D",
+     "text": "Hindi bhajans"
+    }
+   ],
+   "answer": "A",
+   "explanation": "He started in gospel rap, writing devotional rhymes. His grandmother took him to church every day. He told The Goan the name felt right: \"God's child\".",
+   "songLink": "https://music.apple.com/in/album/walking-on-water/1862107389",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV19",
+    "DV30"
+   ]
+  },
+  {
+   "id": "DV8",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "scene history (labels)",
+   "lead": "",
+   "bar": null,
+   "prompt": "DIVINE's debut album *Kohinoor* (9 Oct 2019) was the first release from which label?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Mass Appeal India"
+    },
+    {
+     "key": "B",
+     "text": "Sony Music India"
+    },
+    {
+     "key": "C",
+     "text": "Azadi Records"
+    },
+    {
+     "key": "D",
+     "text": "Kalamkaar"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Mass Appeal India was launched on 21 Aug 2019 by Nas's Mass Appeal and Universal Music. DIVINE was its first signing. *Kohinoor* is co-released with his own Gully Gang.",
+   "songLink": "https://music.apple.com/us/album/kohinoor/1481977846",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV9",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "awards and milestones",
+   "lead": "",
+   "bar": null,
+   "prompt": "In December 2020, a Spotify billboard in New York's Times Square promoted which DIVINE album?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Punya Paap"
+    },
+    {
+     "key": "B",
+     "text": "Kohinoor"
+    },
+    {
+     "key": "C",
+     "text": "Gunehgar"
+    },
+    {
+     "key": "D",
+     "text": "Street Dreams"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It was reported as the first Times Square billboard for an Indian rapper. In 2021 he called it his biggest achievement.",
+   "songLink": "https://music.apple.com/us/album/punya-paap/1542201783",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV12",
+    "DV20"
+   ]
+  },
+  {
+   "id": "DV10",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "collaborations (launch artists)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which launch artist features on DIVINE's song \"Bag\"?",
+   "options": [
+    {
+     "key": "A",
+     "text": "KR$NA"
+    },
+    {
+     "key": "B",
+     "text": "Raftaar"
+    },
+    {
+     "key": "C",
+     "text": "Ikka"
+    },
+    {
+     "key": "D",
+     "text": "Badshah"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Bag (feat. KR$NA)\" is listed on KR$NA's Apple Music page. Ikka and Badshah have other songs with DIVINE.",
+   "songLink": "https://music.apple.com/in/artist/kr%24na/1462405977",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV11",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "collaborations",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which 2019 JioSaavn Original put DIVINE with Nas and Naezy, with Ranveer Singh on the chorus?",
+   "options": [
+    {
+     "key": "A",
+     "text": "NY Se Mumbai"
+    },
+    {
+     "key": "B",
+     "text": "Walking Miracle"
+    },
+    {
+     "key": "C",
+     "text": "Mere Gully Mein"
+    },
+    {
+     "key": "D",
+     "text": "Remand"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"NY Se Mumbai\" (12 Feb 2019) was DIVINE and Naezy's first song together since 2015. Nas was an executive producer of *Gully Boy*.",
+   "songLink": "https://music.apple.com/in/artist/divine/1086309021",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV20",
+    "DV20"
+   ]
+  },
+  {
+   "id": "DV12",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "samples",
+   "lead": "",
+   "bar": null,
+   "prompt": "\"Satya\" (*Punya Paap*, 2020) borrows the chorus of which song from the 1998 film *Satya*?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Goli Maar"
+    },
+    {
+     "key": "B",
+     "text": "Sapne Mein Milti Hai"
+    },
+    {
+     "key": "C",
+     "text": "Badalon Se"
+    },
+    {
+     "key": "D",
+     "text": "Geela Geela Pani"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It interpolates the \"Goli Maar\" chorus (music by Vishal Bhardwaj, lyrics by Gulzar). Karan Kanchan produced it.",
+   "songLink": "https://music.apple.com/us/album/punya-paap/1542201783",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV13",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (bilingual pun)",
+   "lead": "DIVINE on \"3:59 AM\"",
+   "bar": [
+    "Liya nahi chayan tab toh",
+    "Heera yeh chain mein"
+   ],
+   "prompt": "Which two meanings of \"chain\" does he use?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Rest, and a necklace"
+    },
+    {
+     "key": "B",
+     "text": "Money, and handcuffs"
+    },
+    {
+     "key": "C",
+     "text": "Fame, and a bike chain"
+    },
+    {
+     "key": "D",
+     "text": "A store chain, and rest"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Hindi \"chain\" (चैन) is rest; English \"chain\" is the necklace. He never took rest, so now there's a diamond on his chain. Same sound, two languages.",
+   "songLink": "https://www.youtube.com/watch?v=eHyl9KG9RWA",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV14",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (bilingual pun)",
+   "lead": "DIVINE on \"3:59 AM\"",
+   "bar": [
+    "Chhutta paisa rakh ke dekh laya na change"
+   ],
+   "prompt": "Which two meanings does \"change\" carry?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Coins, and transformation"
+    },
+    {
+     "key": "B",
+     "text": "Coins, and a new outfit"
+    },
+    {
+     "key": "C",
+     "text": "Rent, and transformation"
+    },
+    {
+     "key": "D",
+     "text": "Coins, and a train switch"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Chhutta paisa\" (loose coins) sets up \"change\" as coins; the English word pays off as \"I changed the game\". Two languages, one joke.",
+   "songLink": "https://www.youtube.com/watch?v=eHyl9KG9RWA",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV15",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "DIVINE on \"Kaam 25\"",
+   "bar": [
+    "Ram naam satya hai",
+    "Yeh khule aam hatya hai"
+   ],
+   "prompt": "When is \"Ram naam satya hai\" usually chanted?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Carrying a body to cremation"
+    },
+    {
+     "key": "B",
+     "text": "During wedding pheras"
+    },
+    {
+     "key": "C",
+     "text": "At evening aarti"
+    },
+    {
+     "key": "D",
+     "text": "At a baby's naming"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It's the funeral chant. He turns it into a threat: the killing is in broad daylight, and your funeral has begun. \"Satya hai / hatya hai\" is a three-syllable rhyme.",
+   "songLink": "https://www.youtube.com/watch?v=ATf05n5LBHQ",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV16",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "DIVINE on \"Kaam 25\"",
+   "bar": [
+    "Gardi mein fark nahi",
+    "Charsi aur vardi mein"
+   ],
+   "prompt": "Who does \"vardi\" (uniform) stand for?",
+   "options": [
+    {
+     "key": "A",
+     "text": "The police"
+    },
+    {
+     "key": "B",
+     "text": "The army"
+    },
+    {
+     "key": "C",
+     "text": "School kids"
+    },
+    {
+     "key": "D",
+     "text": "Hospital staff"
+    }
+   ],
+   "answer": "A",
+   "explanation": "The uniform stands for the cop wearing it. In the crowd, you can't tell a stoner (charsi) from the police. \"Gardi / vardi\" is a perfect rhyme.",
+   "songLink": "https://www.youtube.com/watch?v=ATf05n5LBHQ",
+   "pending": false,
+   "explicit": true,
+   "avoid": []
+  },
+  {
+   "id": "DV17",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (complete the bar)",
+   "lead": "DIVINE on \"Chorni\"",
+   "bar": [
+    "Kuch saath mai na laaye",
+    "Wo paisa hi kya hai jisko, saath mai na ___"
+   ],
+   "prompt": "Complete the bar.",
+   "options": [
+    {
+     "key": "A",
+     "text": "khaaye"
+    },
+    {
+     "key": "B",
+     "text": "kamaaye"
+    },
+    {
+     "key": "C",
+     "text": "bachaaye"
+    },
+    {
+     "key": "D",
+     "text": "uthaaye"
+    }
+   ],
+   "answer": "A",
+   "explanation": "We brought nothing into the world, so what good is money you don't eat together? \"Saath mein na\" comes back with a new sense, and \"laaye / khaaye\" rhyme.",
+   "songLink": "https://www.youtube.com/watch?v=seEO3--Sy3c",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV18",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "producers and beats",
+   "lead": "",
+   "bar": null,
+   "prompt": "Who produced \"Mere Gully Mein\" (2015), DIVINE and Naezy's breakout?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sez on the Beat"
+    },
+    {
+     "key": "B",
+     "text": "Karan Kanchan"
+    },
+    {
+     "key": "C",
+     "text": "Phenom"
+    },
+    {
+     "key": "D",
+     "text": "iLL Wayno"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Sez on the Beat (Sajeel Kapoor) made it. RS India put its video first in its 10 best Indian music videos of 2015. *Gully Boy* later remade it with Ranveer Singh's verses.",
+   "songLink": "https://music.apple.com/in/album/mere-gully-mein-feat-naezy-single/985088872",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV19",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "identify the artist (clue card)",
+   "lead": "",
+   "bar": null,
+   "prompt": "DIVINE's first rhymes were devotional, inspired by which US Christian rapper?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Lecrae"
+    },
+    {
+     "key": "B",
+     "text": "Andy Mineo"
+    },
+    {
+     "key": "C",
+     "text": "Chance the Rapper"
+    },
+    {
+     "key": "D",
+     "text": "Kanye West"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Lecrae inspired his gospel-rap start, which gave him the name DIVINE. A friend's 50 Cent T-shirt had first pulled him towards rap.",
+   "songLink": "https://music.apple.com/in/album/walking-on-water/1862107389",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV7",
+    "DV30",
+    "DV7",
+    "DV30"
+   ]
+  },
+  {
+   "id": "DV20",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "producers and beats",
+   "lead": "",
+   "bar": null,
+   "prompt": "One producer worked on the title tracks \"Kohinoor\" (2019) and \"Punya Paap\" (2020), plus \"NY Se Mumbai\" (2019). Who?",
+   "options": [
+    {
+     "key": "A",
+     "text": "iLL Wayno"
+    },
+    {
+     "key": "B",
+     "text": "Stunnah Beatz"
+    },
+    {
+     "key": "C",
+     "text": "Phenom"
+    },
+    {
+     "key": "D",
+     "text": "Hit-Boy"
+    }
+   ],
+   "answer": "A",
+   "explanation": "iLL Wayno worked on all three; \"NY Se Mumbai\" was co-produced with XD Pro. Stunnah Beatz made \"3:59 AM\", Phenom made \"Gandhi Money\", and Hit-Boy made \"Gunehgar\".",
+   "songLink": "https://music.apple.com/us/album/kohinoor/1481977846",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV11",
+    "DV11"
+   ]
+  },
+  {
+   "id": "DV21",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (Gully Boy credits)",
+   "lead": "",
+   "bar": null,
+   "prompt": "\"Apna Time Aayega\" was composed by DIVINE and which producer?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Dub Sharma"
+    },
+    {
+     "key": "B",
+     "text": "Ankur Tewari"
+    },
+    {
+     "key": "C",
+     "text": "Mikey McCleary"
+    },
+    {
+     "key": "D",
+     "text": "Karan Kanchan"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Dub Sharma and DIVINE composed it. Ankur Tewari co-wrote the lyrics and was the film's music supervisor. Ranveer Singh sings it.",
+   "songLink": "https://music.apple.com/hk/album/gully-boy-original-motion-picture-soundtrack/1529556349",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV2",
+    "DV2"
+   ]
+  },
+  {
+   "id": "DV22",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "samples",
+   "lead": "",
+   "bar": null,
+   "prompt": "Karan Kanchan made the \"Baazigar\" beat in January 2021. Why did the song wait until *Gunehgar* (Nov 2022)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Its film sample needed clearance"
+    },
+    {
+     "key": "B",
+     "text": "Armani White's verse came late"
+    },
+    {
+     "key": "C",
+     "text": "DIVINE rewrote every verse"
+    },
+    {
+     "key": "D",
+     "text": "It was held for a film"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It samples \"Baazigar O Baazigar\" (1993, Anu Malik), and the clearance took time. Gully Gang's A&R lead sent Kanchan a list of songs that could be cleared.",
+   "songLink": "https://music.apple.com/in/album/gunehgar/1653647754",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV23",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (US artists)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which two US rappers join DIVINE on \"Jungle Mantra\" (2021), made for Netflix's *The White Tiger*?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pusha T and Vince Staples"
+    },
+    {
+     "key": "B",
+     "text": "Jadakiss and Russ"
+    },
+    {
+     "key": "C",
+     "text": "Dave East and Armani White"
+    },
+    {
+     "key": "D",
+     "text": "Nas and Dave East"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Pusha T and Vince Staples. Pusha T later co-headlined Gully Fest 2024 with DIVINE in Mumbai.",
+   "songLink": "https://music.apple.com/in/artist/divine/1086309021",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV24",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (launch artists)",
+   "lead": "",
+   "bar": null,
+   "prompt": "DIVINE and Badshah's first song together, \"Bach Ke Rehna\" (2021), was made for which Netflix film?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Red Notice"
+    },
+    {
+     "key": "B",
+     "text": "Extraction"
+    },
+    {
+     "key": "C",
+     "text": "The Gray Man"
+    },
+    {
+     "key": "D",
+     "text": "Army of the Dead"
+    }
+   ],
+   "answer": "A",
+   "explanation": "With Jonita Gandhi, produced by Mikey McCleary, it reworks \"Bachke Rehna Re Baba\". They met again on \"O'Sajna\" from Badshah's *Ek Tha Raja* (2024).",
+   "songLink": "https://music.apple.com/in/artist/divine/1086309021",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV25",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "collaborations (launch artists)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Ikka's single \"Level Up\" (Oct 2020) features DIVINE and which other rapper?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Kaater"
+    },
+    {
+     "key": "B",
+     "text": "D'Evil"
+    },
+    {
+     "key": "C",
+     "text": "MC Altaf"
+    },
+    {
+     "key": "D",
+     "text": "Shah Rule"
+    }
+   ],
+   "answer": "A",
+   "explanation": "The single is \"Level Up (feat. Divine & Kaater)\", 26 Oct 2020, on Mass Appeal India and Universal Music India.",
+   "songLink": "https://music.apple.com/us/album/level-up-feat-divine-kaater-single/1535754466",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV26",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "awards and milestones",
+   "lead": "",
+   "bar": null,
+   "prompt": "DIVINE was nominated for MTV EMA Best India Act four times by 2023. Which year did he win?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2018"
+    },
+    {
+     "key": "B",
+     "text": "2020"
+    },
+    {
+     "key": "C",
+     "text": "2021"
+    },
+    {
+     "key": "D",
+     "text": "2023"
+    }
+   ],
+   "answer": "C",
+   "explanation": "He won in 2021, at the ceremony in Budapest (14 Nov). He was also nominated in 2018, 2020 and 2023; 2023 went to Tsumyoki.",
+   "songLink": "https://music.apple.com/in/artist/divine/1086309021",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV27",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (labels)",
+   "lead": "",
+   "bar": null,
+   "prompt": "In 2015, which label signed DIVINE and called him \"the Voice of the Streets\"?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sony Music India"
+    },
+    {
+     "key": "B",
+     "text": "Universal Music India"
+    },
+    {
+     "key": "C",
+     "text": "T-Series"
+    },
+    {
+     "key": "D",
+     "text": "Zee Music Company"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Sony's release is dated 21 Oct 2015. The deal ended amicably by early 2018; he moved to Only Much Louder, then started Gully Gang.",
+   "songLink": "https://music.apple.com/in/artist/divine/1086309021",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV28",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history (labels)",
+   "lead": "",
+   "bar": null,
+   "prompt": "Who co-founded Gully Gang Entertainment with DIVINE in 2019, and also manages him?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Chaitanya Kataria"
+    },
+    {
+     "key": "B",
+     "text": "Ankur Tewari"
+    },
+    {
+     "key": "C",
+     "text": "Joel D'Souza"
+    },
+    {
+     "key": "D",
+     "text": "Chinmay Deshpande"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Chaitanya Kataria. Gully Gang (launched Feb 2019) covers a record label, Gully Fest, merch and content. Joel D'Souza (JD) directs his videos; Chinmay Deshpande is Gully Gang's A&R lead.",
+   "songLink": "https://music.apple.com/in/artist/divine/1086309021",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV29",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "scene history (beef, dated facts only)",
+   "lead": "",
+   "bar": null,
+   "prompt": "DIVINE's April 2020 diss track \"Chaabi Wala Bandar\", aimed at Emiway Bantai, is named after what?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A toy monkey"
+    },
+    {
+     "key": "B",
+     "text": "A street performer's monkey"
+    },
+    {
+     "key": "C",
+     "text": "A monkey-shaped keychain"
+    },
+    {
+     "key": "D",
+     "text": "A cartoon monkey"
+    }
+   ],
+   "answer": "A",
+   "explanation": "RS India (18 Apr 2020) says the title refers to the \"Musical Jolly Chimp\", a battery-operated toy by Daishin C.K. It traced the exchange to a remark about Emiway's name at a gig, which DIVINE reused on \"Remand\" (2019).",
+   "songLink": "https://music.apple.com/in/artist/divine/1086309021",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV30",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "DIVINE on \"3:59 AM\" (2020)",
+   "bar": [
+    "Bhagwaan mujhe bola divine paani pe chal"
+   ],
+   "prompt": "Which later DIVINE album shares this bar's image?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Walking on Water"
+    },
+    {
+     "key": "B",
+     "text": "Gunehgar"
+    },
+    {
+     "key": "C",
+     "text": "Street Dreams"
+    },
+    {
+     "key": "D",
+     "text": "Kohinoor"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Paani pe chal\" is walking on water, Jesus's miracle in the Gospels, and \"divine\" is both his name and \"godly\". Apple says *Walking on Water* (Dec 2025) nods to his gospel-rap start.",
+   "songLink": "https://www.youtube.com/watch?v=eHyl9KG9RWA",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV7",
+    "DV19",
+    "DV7",
+    "DV19"
+   ]
+  },
+  {
+   "id": "DV31",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (bilingual pun)",
+   "lead": "DIVINE on \"3:59 AM\"",
+   "bar": [
+    "Nas wale mode mein",
+    "Khoon se behtar koi nahi shaks wale mode mein"
+   ],
+   "prompt": "Besides the US rapper, what does \"nas\" mean in Hindi?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A vein"
+    },
+    {
+     "key": "B",
+     "text": "A breath"
+    },
+    {
+     "key": "C",
+     "text": "A bone"
+    },
+    {
+     "key": "D",
+     "text": "A wound"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Nas\" is the US rapper and the Hindi word for a vein, which is what blood runs in. Nas also features on \"Walking Miracle\" on the same album.",
+   "songLink": "https://www.youtube.com/watch?v=eHyl9KG9RWA",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV32",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (find the rhyme)",
+   "lead": "DIVINE on \"3:59 AM\"",
+   "bar": [
+    "Kaptani innings yeh hai Kohli wala shot",
+    "Ghar ke bahar tere paunche yeh rangoli wala shot"
+   ],
+   "prompt": "\"Wala shot\" repeats at the end of both lines (the radeef). Which words rhyme just before it (the qaafiya)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Kohli / rangoli"
+    },
+    {
+     "key": "B",
+     "text": "innings / bahar"
+    },
+    {
+     "key": "C",
+     "text": "Kaptani / paunche"
+    },
+    {
+     "key": "D",
+     "text": "yeh hai / tere"
+    }
+   ],
+   "answer": "A",
+   "explanation": "The radeef is the end phrase that repeats (\"wala shot\"). The rhyme just before it, Kohli / rangoli, is the qaafiya. \"Shot\" works as a cricket shot and a diss.",
+   "songLink": "https://www.youtube.com/watch?v=eHyl9KG9RWA",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV33",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "slang and references (Bambaiya)",
+   "lead": "DIVINE on \"Kaam 25\"",
+   "bar": [
+    "Alag kutte, yeh kaat’te yeh bhaunkte nahi",
+    "Alag ghode, yeh thokte yeh daudte nahi"
+   ],
+   "prompt": "In Bambaiya slang, what is a \"ghoda\"?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A gun"
+    },
+    {
+     "key": "B",
+     "text": "A getaway bike"
+    },
+    {
+     "key": "C",
+     "text": "A hired runner"
+    },
+    {
+     "key": "D",
+     "text": "A racehorse bet"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Ghoda\" (horse) is Bambaiya for a gun, from the trigger. So these \"horses\" don't run, they fire. The dogs bite without barking.",
+   "songLink": "https://www.youtube.com/watch?v=ATf05n5LBHQ",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV34",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (simile or metaphor)",
+   "lead": "DIVINE on \"Kaam 25\"",
+   "bar": [
+    "Paani hai gehra aur",
+    "Shooter sab shark se hain"
+   ],
+   "prompt": "Look at \"shooter sab shark se\". Simile or metaphor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Simile (upma)"
+    },
+    {
+     "key": "B",
+     "text": "Metaphor (rupak)"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Se\" (plural of \"sa\") means \"like\", so the shooters are like sharks: a simile. (The deep water standing for Mumbai is a metaphor.)",
+   "songLink": "https://www.youtube.com/watch?v=ATf05n5LBHQ",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DV35",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "DIVINE on \"Chorni\"",
+   "bar": [
+    "Moosa, Nipsey, Pac, Moosa, Nipsey, Pac",
+    "Uh, seekha maine inse, what is real hip-hop"
+   ],
+   "prompt": "What do all three have in common?",
+   "options": [
+    {
+     "key": "A",
+     "text": "All three were shot dead"
+    },
+    {
+     "key": "B",
+     "text": "All three ran clothing stores"
+    },
+    {
+     "key": "C",
+     "text": "All three were from Los Angeles"
+    },
+    {
+     "key": "D",
+     "text": "All three won Grammys"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Sidhu Moose Wala (\"Moosa\", after his village), Nipsey Hussle and Tupac were all shot dead: in 2022, 2019 and 1996.",
+   "songLink": "https://www.youtube.com/watch?v=seEO3--Sy3c",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DV4",
+    "DV4"
+   ]
+  },
+  {
+   "id": "DV36",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (double meaning)",
+   "lead": "DIVINE on \"3:59 AM\"",
+   "bar": [
+    "Circle rakta tight aur main circle jitna Fuck deta"
+   ],
+   "prompt": "Going by the shape, how much does he care?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Zero, like the shape 0"
+    },
+    {
+     "key": "B",
+     "text": "Fully, like a closed circle"
+    },
+    {
+     "key": "C",
+     "text": "Only for his inner circle"
+    },
+    {
+     "key": "D",
+     "text": "Round the clock"
+    }
+   ],
+   "answer": "A",
+   "explanation": "He keeps his circle tight, and gives as many f***s as a circle: a circle looks like 0. Same word, two jobs: his crew, then the shape.",
+   "songLink": "https://www.youtube.com/watch?v=eHyl9KG9RWA",
+   "pending": false,
+   "explicit": true,
+   "avoid": []
+  }
+ ],
+ "slug": "divine"
+}

@@ -11,6 +11,12 @@
    "name": "Seedhe Maut",
    "round": "seedhe-maut-r1",
    "count": 36
+  },
+  {
+   "slug": "divine",
+   "name": "DIVINE",
+   "round": "divine-r1",
+   "count": 41
   }
  ]
 }
