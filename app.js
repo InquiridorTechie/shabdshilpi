@@ -147,7 +147,7 @@
       wrong(wrongs) { stopTick(); moment(wrongs >= 3 && wrongs % 3 === 0 ? "wrongStreak" : "wrong"); },
       timeout(wrongs) { stopTick(); moment(wrongs >= 3 && wrongs % 3 === 0 ? "wrongStreak" : "timeup"); },
       stop: stopTick,
-      finish(score, n) { stopTick(); moment(score === 0 ? "endZero" : score / n >= 0.7 ? "endHigh" : score / n >= 0.4 ? "endMid" : "endLow"); },
+      finish(score, n) { stopTick(); moment(score === 0 ? "endZero" : score / n >= 0.7 ? "endHigh" : score / n >= 0.5 ? "endMid" : "endLow"); },  // 0 | 1-4 | 5-6 | 7-10 (out of 10)
     };
   })();
 
