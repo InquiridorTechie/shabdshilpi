@@ -7,7 +7,8 @@
   const params = new URLSearchParams(location.search);
   const ARTIST_SLUG = (params.get("a") || "").toLowerCase();
   let ARTIST = "";       // display name, e.g. "KR$NA"
-  let ROUND = "round";   // round id, e.g. "krsna-r1" (Sheet + saved first scores)
+  let ROUND = "round";
+  let IS_DROP = false;   // true when playing a New Drop round   // round id, e.g. "krsna-r1" (Sheet + saved first scores)
   const $ = (id) => document.getElementById(id);
 
   // ---------- state ----------
@@ -137,12 +138,12 @@
       unlock() { if (on) preload(); },
       get on() { return on; },
       toggle() { on = !on; store.set("ss_sound", on); if (on) preload(); return on; },
-      start(mode) { moment(mode === "hardcore" ? "startHardcore" : "start"); },
+      start(mode) { turn.right = 0; turn.wrong = 0; moment(mode === "hardcore" ? "startHardcore" : "start"); },   // rotations start fresh each round
       tickSecs,
       // remainSecs: time left when called; if we're a little late, skip into the clip so it still ends at 0
       timerLow(remainSecs) { stopTick(); moment("timerLow", (stop) => { ticking = stop; }, Math.max(0, tickSecs() - remainSecs)); },
       // a right answer: every 3rd in a row = cheering; a very fast one (< 3s) = swish; else the usual rotation
-      right(streak, ms) { stopTick(); moment(streak >= 3 && streak % 3 === 0 ? "streak" : ms < 3000 ? "fast" : "right"); },
+      right(streak, ms) { stopTick(); moment(streak >= 4 && streak % 4 === 0 ? "streak" : ms < 3000 ? "fast" : "right"); },   // cheering on every 4th right in a row
       // 3 wrong in a row = "ye kya hai"
       wrong(wrongs) { stopTick(); moment(wrongs >= 3 && wrongs % 3 === 0 ? "wrongStreak" : "wrong"); },
       timeout(wrongs) { stopTick(); moment(wrongs >= 3 && wrongs % 3 === 0 ? "wrongStreak" : "timeup"); },
@@ -204,7 +205,9 @@
       }
       picked = ["easy", "medium", "hard"].flatMap((lvl) => shuffle(byLevel[lvl] || []));
       const bars = picked.filter((q) => q.kind === "bar").length;
-      if (bars >= M.bars[0] && bars <= M.bars[1]) break;
+      // New Drops are about the new songs, so bar-heavy rounds are fine there (decision 70)
+      const [bmin, bmax] = IS_DROP ? [2, 10] : M.bars;
+      if (bars >= bmin && bars <= bmax) break;
     }
     return picked.map((q) => {
       const numeric = q.options.every((o) => /^\d+$/.test(o.text.trim()));
@@ -221,11 +224,48 @@
       note.hidden = false;
       note.textContent = "Pehla score count hota hai: " + notes.map(([m, f]) => `${MODES[m].label} ${f.score}/${f.total}`).join(" · ") + ". Ab replays practice hain.";
     }
-    const input = $("player-name");
-    input.value = playerName;
-    input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); startRound("normal"); } });
-    $("btn-start").addEventListener("click", () => startRound("normal"));
-    $("btn-hardcore").addEventListener("click", () => startRound("hardcore"));
+    showPlayingAs();
+    $("btn-start").addEventListener("click", () => beginWithName("normal"));
+    $("btn-hardcore").addEventListener("click", () => beginWithName("hardcore"));
+    $("btn-edit-name").addEventListener("click", () => askName(null));
+    const dlg = $("name-dialog");
+    $("name-form").addEventListener("submit", (e) => { e.preventDefault(); closeName(true); });
+    $("btn-name-skip").addEventListener("click", () => closeName(false));
+    dlg.addEventListener("cancel", (e) => { e.preventDefault(); closeName(false); });   // Esc = Skip
+  }
+
+  // ---------- name popup: asked on Shuru karo / Hardcore until a name is saved; at most 3 asks if skipped ----------
+  const skipsKey = "ss_name_skips";
+  let pendingMode = null;   // mode to start after the popup closes (null = just editing the name)
+  function showPlayingAs() {
+    $("playing-as").hidden = !playerName;
+    $("playing-name").textContent = playerName;
+  }
+  function beginWithName(m) {
+    if (playerName || store.get(skipsKey, 0) >= 3) { startRound(m); return; }
+    askName(m);
+  }
+  function askName(m) {
+    pendingMode = m;
+    const dlg = $("name-dialog");
+    $("player-name").value = playerName;
+    $("btn-name-skip").textContent = m ? "Skip" : "Cancel";
+    if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+    setTimeout(() => $("player-name").focus(), 30);
+  }
+  function closeName(save) {
+    const dlg = $("name-dialog");
+    if (save) {
+      const n = cleanName($("player-name").value || "");
+      if (n) { playerName = n; store.set(nameKey, n); }
+      else if (pendingMode) store.set(skipsKey, store.get(skipsKey, 0) + 1);
+    } else if (pendingMode && !playerName) {
+      store.set(skipsKey, store.get(skipsKey, 0) + 1);
+    }
+    if (typeof dlg.close === "function" && dlg.open) dlg.close(); else dlg.removeAttribute("open");
+    showPlayingAs();
+    const m = pendingMode; pendingMode = null;
+    if (m) startRound(m);
   }
 
   let streak = 0, wrongs = 0;
@@ -234,8 +274,6 @@
     if (m) mode = m;
     attempt = store.get(attemptsKey(), 0) + 1;
     document.body.classList.toggle("is-hardcore", mode === "hardcore");
-    playerName = cleanName($("player-name").value || "");
-    store.set(nameKey, playerName);
     idx = 0; score = 0; results = []; locked = false;
     questions = buildRound();
     SFX.start(mode);
@@ -535,21 +573,28 @@
   // ---------- boot ----------
   const fail = (where) => $(where).insertAdjacentHTML("beforeend", '<p class="muted">Load nahi hua. Page refresh karo.</p>');
 
+  const today = () => new Date().toISOString().slice(0, 10);
+  const liveDrop = (a) => a.drop && today() <= a.drop.until;
   function showPicker(artists) {
-    $("artist-list").innerHTML = artists.map((a) =>
-      `<a class="artist-card" href="?a=${encodeURIComponent(a.slug)}"><span class="an">${esc(a.name)}</span><span class="ac">${a.count} sawaal<br>Normal<br>Hardcore 🔥</span></a>`).join("");
+    const card = (a) => a.drop
+      ? `<a class="artist-card drop-card" href="?a=${encodeURIComponent(a.slug)}"><span class="drop-badge">🆕 New Drop</span><span class="an">${esc(a.name)}</span><span class="drop-sub">${esc(a.drop.subtitle)} · ${a.count} sawaal</span></a>`
+      : `<a class="artist-card" href="?a=${encodeURIComponent(a.slug)}"><span class="an">${esc(a.name)}</span><span class="ac">${a.count} sawaal<br>Normal<br>Hardcore 🔥</span></a>`;
+    // live drops first, then artists; expired drops are hidden from the picker (their link still works)
+    const list = [...artists.filter(liveDrop), ...artists.filter((a) => !a.drop)];
+    $("artist-list").innerHTML = list.map(card).join("");
     show("screen-pick");
   }
 
-  function setPoster(name) {
+  function setPoster(name, isDrop) {
     const words = name.split(/\s+/);
     const longest = Math.max(...words.map((w) => w.length));
-    const size = `min(${Math.min(27, Math.floor(135 / longest))}vw, ${Math.min(168, Math.floor(840 / longest))}px)`;
+    const scale = isDrop ? 0.62 : 1;   // drop titles are long, so smaller
+    const size = `min(${Math.floor(Math.min(27, 135 / longest) * scale)}vw, ${Math.floor(Math.min(168, 840 / longest) * scale)}px)`;
     $("start-title").classList.toggle("multi", words.length > 1);
     ["poster-name", "poster-echo"].forEach((id) => {
       const el = $(id);
-      el.innerHTML = words.map(esc).join("<br>");
-      el.style.fontSize = size;
+      el.innerHTML = isDrop ? esc(name) : words.map(esc).join("<br>");   // long drop titles wrap naturally
+      el.style.fontSize = isDrop ? "min(15vw, 92px)" : size;
     });
   }
 
@@ -559,9 +604,13 @@
     .then(({ artists }) => {
       const a = artists.find((x) => x.slug === ARTIST_SLUG);
       if (!a) { showPicker(artists); return null; }
-      ARTIST = a.name; ROUND = a.round;
-      document.title = `Shabdshilpi · ${a.name} Round`;
-      setPoster(a.name);
+      ARTIST = a.name; ROUND = a.round; IS_DROP = !!a.drop;
+      document.title = `Shabdshilpi · ${a.name}${a.drop ? "" : " Round"}`;
+      setPoster(a.name, !!a.drop);
+      if (a.drop) {
+        document.querySelector("#screen-start .kicker").lastChild.textContent = ` 🆕 New Drop · ${a.drop.subtitle}`;
+        document.body.classList.add("is-drop");
+      }
       $("back-link").hidden = artists.length < 2;
       // the next-artist chips shouldn't offer the artist you just played
       document.querySelectorAll("#fb-artists input").forEach((i) => {

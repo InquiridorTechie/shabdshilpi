@@ -107,14 +107,23 @@ body {
 .rules p { margin: 6px 0; }
 
 /* optional name */
-.name-field { display: grid; gap: 8px; margin: 0 0 18px; }
-.name-field label { font-weight: 700; font-size: 15px; }
-.name-field input {
-  font: inherit; font-size: 18px; padding: 13px 14px; border-radius: var(--r);
-  border: 2px solid var(--paper); background: var(--wall-2); color: var(--paper); min-height: 52px;
+.playing-as { margin: 0 0 14px; color: var(--paper-dim); font-size: 15px; }
+.playing-as b { color: var(--paper); }
+.link-btn-light { background: none; border: 0; cursor: pointer; font-size: 16px; padding: 6px; min-width: 36px; min-height: 36px; }
+.link-btn-light:focus-visible { outline: 3px solid var(--hl); outline-offset: 2px; border-radius: 8px; }
+.name-dialog {
+  width: min(92vw, 420px); border: 2px solid var(--paper); border-radius: var(--r); padding: 22px;
+  background: var(--wall-2); color: var(--paper); box-shadow: 6px 6px 0 var(--hl);
 }
-.name-field input::placeholder { color: var(--paper-dim); opacity: .7; }
-.name-field input:focus { outline: 3px solid var(--hl); outline-offset: 2px; }
+.name-dialog::backdrop { background: rgba(0, 0, 0, .65); }
+.name-dialog h2 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: 30px; margin: 0 0 4px; }
+.name-dialog input {
+  font: inherit; font-size: 18px; width: 100%; padding: 13px 14px; margin: 12px 0 16px; border-radius: var(--r);
+  border: 2px solid var(--paper); background: var(--wall); color: var(--paper); min-height: 52px;
+}
+.name-dialog input:focus { outline: 3px solid var(--hl); outline-offset: 2px; }
+.name-actions { display: flex; gap: 12px; justify-content: flex-end; }
+.name-actions .btn-primary { width: auto; font-size: 20px; }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -157,6 +166,18 @@ body {
 .back-link { color: var(--paper-dim); text-decoration: none; margin-right: 10px; letter-spacing: .1em; }
 .back-link:hover { color: var(--paper); }
 .tag.tag-explicit { background: var(--heat); color: var(--ink); }
+
+/* new drop card */
+.artist-card.drop-card {
+  display: grid; justify-content: stretch; gap: 6px; background: var(--hl); color: var(--ink); border-color: var(--ink);
+  box-shadow: 5px 5px 0 var(--heat);
+}
+.drop-card .an { font-size: clamp(30px, 8.5vw, 44px); }
+.drop-badge {
+  justify-self: start; font-family: var(--f-display); text-transform: uppercase; letter-spacing: .1em; font-size: 13px;
+  background: var(--ink); color: var(--hl); padding: 4px 10px; border-radius: 4px; animation: pulse .8s ease-in-out infinite alternate;
+}
+.drop-sub { font-weight: 700; font-size: 15px; }
 
 /* hardcore */
 .mode-row { display: grid; gap: 12px; }

@@ -1,0 +1,866 @@
+{
+ "round": "dtth-r1",
+ "artist": "Don't Try This At Home",
+ "questions": [
+  {
+   "id": "DT21",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "slang and references (cross-song callback)",
+   "lead": "Encore ABJ on \"Fillet Mignion\"",
+   "bar": [
+    "Saans nahi aa rahi bhaiya kehke"
+   ],
+   "prompt": "These words echo a line from which KR$NA song?",
+   "options": [
+    {
+     "key": "A",
+     "text": "MAHARANI"
+    },
+    {
+     "key": "B",
+     "text": "Joota Japani"
+    },
+    {
+     "key": "C",
+     "text": "I Guess"
+    },
+    {
+     "key": "D",
+     "text": "Vyanjan"
+    }
+   ],
+   "answer": "A",
+   "explanation": "KR$NA's \"MAHARANI\" (2020) has \"Raftaar bhaiya mujhe saans nahi aa rahi thi\". \"Kehke\" (by saying) marks Encore's words as a quote.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT25",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "Raftaar on \"Fillet Mignion\"",
+   "bar": [
+    "You accept a nexus, I expected pyaar",
+    "I misread the respect Tu Pai Yaar se bahar"
+   ],
+   "prompt": "Say \"tu pai yaar\" fast. What does the hidden maths say?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2πr: you're out of my circle"
+    },
+    {
+     "key": "B",
+     "text": "πr²: you're out of my space"
+    },
+    {
+     "key": "C",
+     "text": "22/7: you never end"
+    },
+    {
+     "key": "D",
+     "text": "2 + 2: you don't add up"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Tu pai yaar\" sounds like \"two pi r\", and 2πr is a circle's circumference: outside it means out of the inner circle. It also sounds close to \"bhai yaar\" (brother, friend).",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DT11",
+    "DT1"
+   ]
+  },
+  {
+   "id": "DT26",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (complete the bar)",
+   "lead": "Complete Encore ABJ's bars on \"Fillet Mignion\"",
+   "bar": [
+    "Aur JFK aur tujhme yahan pe bas ek ko samaanta hai",
+    "Ek dead rapper, ek dead president ke saath ___ baant raha hai"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "janamdin"
+    },
+    {
+     "key": "B",
+     "text": "maut ka din"
+    },
+    {
+     "key": "C",
+     "text": "kursi"
+    },
+    {
+     "key": "D",
+     "text": "naam"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Janamdin baant raha hai\" means sharing a birthday: the one thing JFK and \"tu\" have in common.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DT27"
+   ]
+  },
+  {
+   "id": "DT1",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "collaborations (launch artists)",
+   "lead": "",
+   "bar": null,
+   "prompt": "*Don't Try This At Home* has one artist besides KR$NA and Seedhe Maut. Who?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Raftaar"
+    },
+    {
+     "key": "B",
+     "text": "MC Stan"
+    },
+    {
+     "key": "C",
+     "text": "Badshah"
+    },
+    {
+     "key": "D",
+     "text": "Ikka"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Raftaar is credited as a third main artist on \"Fillet Mignion\". He is the EP's only guest.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT2",
+   "reserve": false,
+   "kind": "fact",
+   "level": "easy",
+   "seconds": 20,
+   "type": "albums and discography",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which song opens *Don't Try This At Home*?",
+   "options": [
+    {
+     "key": "A",
+     "text": "BUZZ"
+    },
+    {
+     "key": "B",
+     "text": "Mujhe Nahi Chahiye"
+    },
+    {
+     "key": "C",
+     "text": "Fillet Mignion"
+    },
+    {
+     "key": "D",
+     "text": "Please"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"BUZZ\" is track 1. It was already out as a single before the EP dropped on 20 Nov 2026.",
+   "songLink": "https://www.youtube.com/watch?v=EtRDi6HhCfg",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT3",
+   "reserve": false,
+   "kind": "bar",
+   "level": "easy",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "On \"Fillet Mignion\"",
+   "bar": [
+    "Mallu arjun na jhukega jaake jaan kaari"
+   ],
+   "prompt": "Which film's famous dialogue does \"na jhukega\" flip?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pushpa: The Rise"
+    },
+    {
+     "key": "B",
+     "text": "Ala Vaikunthapurramuloo"
+    },
+    {
+     "key": "C",
+     "text": "KGF: Chapter 1"
+    },
+    {
+     "key": "D",
+     "text": "Baahubali 2"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Allu Arjun plays Pushpa Raj, whose line is \"Jhukega nahi saala\". Raftaar adds an \"M\": \"Mallu\" is slang for a Malayali, and he was born in Trivandrum, Kerala.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT4",
+   "reserve": false,
+   "kind": "bar",
+   "level": "easy",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "On \"Fillet Mignion\"",
+   "bar": [
+    "Na hi khaata hoon main beef, na hi suar",
+    "Na hi karta hoon main suaron se beef"
+   ],
+   "prompt": "What two meanings does \"beef\" carry?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Meat, and a rap feud"
+    },
+    {
+     "key": "B",
+     "text": "Meat, and a business deal"
+    },
+    {
+     "key": "C",
+     "text": "Meat, and showing off muscle"
+    },
+    {
+     "key": "D",
+     "text": "A rap feud, and a fake friend"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Encore ABJ ends both bars on \"beef\": first the meat, then the feud. \"Suar\" (pork) becomes \"suaron\" (pigs), his word for rivals. He won't feud with pigs.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT5",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "albums and discography",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which track on *Don't Try This At Home* is a one-minute skit?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Late / Latte"
+    },
+    {
+     "key": "B",
+     "text": "Please"
+    },
+    {
+     "key": "C",
+     "text": "Wait For A While"
+    },
+    {
+     "key": "D",
+     "text": "Mujhe Nahi Chahiye"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Late / Latte (Skit)\" runs 1:02, the shortest track on the EP. The title sets two near sound-alike words side by side.",
+   "songLink": "https://music.apple.com/in/album/late-latte-skit/6832975155?i=6832975471",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT6",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "albums and discography",
+   "lead": "",
+   "bar": null,
+   "prompt": "Which song closes the EP and is also its longest, at 4:56?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fillet Mignion"
+    },
+    {
+     "key": "B",
+     "text": "Mujhe Nahi Chahiye"
+    },
+    {
+     "key": "C",
+     "text": "Please"
+    },
+    {
+     "key": "D",
+     "text": "BUZZ"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Fillet Mignion\" is track 6 (4:56). \"Mujhe Nahi Chahiye\" comes next at 4:41. Stores spell the title \"Fillet Mignion\", not \"Filet Mignon\".",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT7",
+   "reserve": false,
+   "kind": "fact",
+   "level": "medium",
+   "seconds": 20,
+   "type": "collaborations",
+   "lead": "",
+   "bar": null,
+   "prompt": "Before this EP, Seedhe Maut featured on which song from KR$NA's 2025 mixtape *Yours Truly*?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sensitive"
+    },
+    {
+     "key": "B",
+     "text": "Hola Amigo"
+    },
+    {
+     "key": "C",
+     "text": "Khatta Flow"
+    },
+    {
+     "key": "D",
+     "text": "Nanchaku"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Sensitive\" (feat. Seedhe Maut) is on *Yours Truly* (22 May 2025). \"Hola Amigo\" and \"Khatta Flow\" were their 2023 songs together.",
+   "songLink": "https://music.apple.com/us/album/sensitive/1814144078",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT8",
+   "reserve": false,
+   "kind": "bar",
+   "level": "easy",
+   "seconds": 40,
+   "type": "slang and references (complete the bar)",
+   "lead": "Complete the bar from \"Mujhe Nahi Chahiye\"",
+   "bar": [
+    "Mujhe nahi chahiye log aise jo Jai Veeru bolein par bhool jaate ___"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sholay"
+    },
+    {
+     "key": "B",
+     "text": "Deewar"
+    },
+    {
+     "key": "C",
+     "text": "Zanjeer"
+    },
+    {
+     "key": "D",
+     "text": "Don"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Jai and Veeru are the best friends of *Sholay* (1975). Calm doesn't want people who call themselves Jai-Veeru but forget what that friendship meant.",
+   "songLink": "https://www.youtube.com/watch?v=LvoAicLlw3Q",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT9",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "On \"Mujhe Nahi Chahiye\"",
+   "bar": [
+    "ye saare hain machhar, hum ja rahe all out"
+   ],
+   "prompt": "What two meanings does \"all out\" carry?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Full effort, and a mosquito repellent"
+    },
+    {
+     "key": "B",
+     "text": "Full effort, and a power cut"
+    },
+    {
+     "key": "C",
+     "text": "Running away, and a mosquito net"
+    },
+    {
+     "key": "D",
+     "text": "Lights out, and a mosquito coil"
+    }
+   ],
+   "answer": "A",
+   "explanation": "Encore ABJ calls rivals \"machhar\" (mosquitoes). \"All out\" means full effort, and All Out is a mosquito repellent sold in India. One phrase, two meanings, two languages.",
+   "songLink": "https://www.youtube.com/watch?v=LvoAicLlw3Q",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT10",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Who raps this on \"Fillet Mignion\"?",
+   "bar": [
+    "Wo pooche net worth meri, maine kaha, 'Chill'",
+    "Ye karein network, launde pehle daal SIM"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "KR$NA"
+    },
+    {
+     "key": "B",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "C",
+     "text": "Calm"
+    },
+    {
+     "key": "D",
+     "text": "Raftaar"
+    }
+   ],
+   "answer": "C",
+   "explanation": "It's Calm's verse. \"Net worth\" and \"network\" sound alike. These guys go networking, but with no SIM there's no network: they aren't even connected.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT11",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Who raps this on \"Fillet Mignion\"?",
+   "bar": [
+    "DMX but I never dm exes"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "KR$NA"
+    },
+    {
+     "key": "B",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "C",
+     "text": "Calm"
+    },
+    {
+     "key": "D",
+     "text": "Raftaar"
+    }
+   ],
+   "answer": "D",
+   "explanation": "It's Raftaar's verse. Say the letters D-M-X and you get \"DM exes\": he's raw like DMX, but he never messages his exes.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DT1",
+    "DT3"
+   ]
+  },
+  {
+   "id": "DT12",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "albums and discography",
+   "lead": "",
+   "bar": null,
+   "prompt": "On streaming, which song is track 2 of *Don't Try This At Home*?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Mujhe Nahi Chahiye"
+    },
+    {
+     "key": "B",
+     "text": "Please"
+    },
+    {
+     "key": "C",
+     "text": "Wait For A While"
+    },
+    {
+     "key": "D",
+     "text": "Late / Latte (Skit)"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Mujhe Nahi Chahiye\" (4:41) comes straight after the opener, \"BUZZ\". The skit is track 3.",
+   "songLink": "https://www.youtube.com/watch?v=LvoAicLlw3Q",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT14",
+   "reserve": false,
+   "kind": "fact",
+   "level": "hard",
+   "seconds": 20,
+   "type": "scene history",
+   "lead": "",
+   "bar": null,
+   "prompt": "In 2026, KR$NA and Raftaar judged a new hip-hop reality show. What is it called?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Legacy"
+    },
+    {
+     "key": "B",
+     "text": "Dynasty"
+    },
+    {
+     "key": "C",
+     "text": "Kingdom"
+    },
+    {
+     "key": "D",
+     "text": "Empire"
+    }
+   ],
+   "answer": "A",
+   "explanation": "*Legacy* (2026), presented by Kalamkaar Music and SVF Music, has KR$NA and Raftaar as judges. It aired on YouTube, then ZEE5.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT15",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "slang and references (decode the meaning)",
+   "lead": "On \"Fillet Mignion\"",
+   "bar": [
+    "par tera bhai yahan dead president chhaap raha hai"
+   ],
+   "prompt": "What is he printing?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Money"
+    },
+    {
+     "key": "B",
+     "text": "Death notices"
+    },
+    {
+     "key": "C",
+     "text": "Election posters"
+    },
+    {
+     "key": "D",
+     "text": "History books"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Dead presidents\" is US slang for banknotes, since most US notes show presidents who have died. \"Chhaap raha\" means printing, so Encore ABJ is printing money.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT16",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "lyric craft (decode the meaning)",
+   "lead": "On \"Fillet Mignion\"",
+   "bar": [
+    "Dead presidents ki baat karein, tere sar pe goli daag raha hai",
+    "Agar JFK sa AFK tu aaj kahan se bhaag raha hai?"
+   ],
+   "prompt": "Why does \"JFK sa AFK\" land?",
+   "options": [
+    {
+     "key": "A",
+     "text": "JFK was shot; AFK means inactive"
+    },
+    {
+     "key": "B",
+     "text": "JFK resigned; AFK means away"
+    },
+    {
+     "key": "C",
+     "text": "JFK was shot; AFK means unarmed"
+    },
+    {
+     "key": "D",
+     "text": "JFK lost; AFK means knocked out"
+    }
+   ],
+   "answer": "A",
+   "explanation": "JFK, US President John F. Kennedy, was shot dead in 1963, which ties to \"goli\". AFK (\"away from keyboard\") is gamer talk for inactive. If you're as still as JFK, how are you running?",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DT27"
+   ]
+  },
+  {
+   "id": "DT17",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "lyric craft (complete the bar)",
+   "lead": "Complete the bar from \"Mujhe Nahi Chahiye\"",
+   "bar": [
+    "Badlega waqt ye bol nahi paate, In baato me wazan ye ___ nahi paate"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "tol"
+    },
+    {
+     "key": "B",
+     "text": "bol"
+    },
+    {
+     "key": "C",
+     "text": "rok"
+    },
+    {
+     "key": "D",
+     "text": "khol"
+    }
+   ],
+   "answer": "A",
+   "explanation": "\"Wazan\" (weight) calls for \"tol\" (to weigh). \"Nahi paate\" repeats at every line end (radeef) while the rhyme word before it changes: rok, bol, tol (qaafiya).",
+   "songLink": "https://www.youtube.com/watch?v=LvoAicLlw3Q",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT18",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Who raps this on \"BUZZ\"?",
+   "bar": [
+    "Sheher hai yeh jungle, kabhi bhi lage yeh Chambal hai",
+    "Milein mujhe toh humble hain, trouble hai, beta, mat khoj"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "KR$NA"
+    },
+    {
+     "key": "B",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "C",
+     "text": "Calm"
+    },
+    {
+     "key": "D",
+     "text": "Raftaar"
+    }
+   ],
+   "answer": "A",
+   "explanation": "It's KR$NA's verse. The Chambal ravines were once known for dacoits. Jungle, Chambal, humble and trouble rhyme across Hindi and English.",
+   "songLink": "https://www.youtube.com/watch?v=EtRDi6HhCfg",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT19",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Who raps this on \"BUZZ\"?",
+   "bar": [
+    "Tu banna chahta star hai, lekin taare tere not align"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "KR$NA"
+    },
+    {
+     "key": "B",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "C",
+     "text": "Calm"
+    },
+    {
+     "key": "D",
+     "text": "Raftaar"
+    }
+   ],
+   "answer": "B",
+   "explanation": "It's Encore ABJ's verse. \"Star\" (famous) in English and \"taare\" (stars, fate) in Hindi: you want to be a star, but your stars won't align.",
+   "songLink": "https://www.youtube.com/watch?v=EtRDi6HhCfg",
+   "pending": false,
+   "explicit": false,
+   "avoid": []
+  },
+  {
+   "id": "DT20",
+   "reserve": false,
+   "kind": "bar",
+   "level": "hard",
+   "seconds": 40,
+   "type": "identify the artist (who said this bar?)",
+   "lead": "Who raps this on \"Mujhe Nahi Chahiye\"?",
+   "bar": [
+    "Logon ko pata hai naam Seedhe Maut hai mera, main knock karoon toh ye khauf khaaye",
+    "Jab main talk karoon inki job ja rahi, inhein lock karoon ye na bhauk paa rahe"
+   ],
+   "prompt": "",
+   "options": [
+    {
+     "key": "A",
+     "text": "KR$NA"
+    },
+    {
+     "key": "B",
+     "text": "Encore ABJ"
+    },
+    {
+     "key": "C",
+     "text": "Calm"
+    },
+    {
+     "key": "D",
+     "text": "Raftaar"
+    }
+   ],
+   "answer": "B",
+   "explanation": "It's Encore ABJ's verse. \"Naam Seedhe Maut\" leaves only Calm or Encore. Knock, talk, job and lock share one short \"o\" sound; rivals who can't \"bhauk\" (bark) are dogs.",
+   "songLink": "https://www.youtube.com/watch?v=LvoAicLlw3Q",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DT9"
+   ]
+  },
+  {
+   "id": "DT27",
+   "reserve": false,
+   "kind": "bar",
+   "level": "medium",
+   "seconds": 40,
+   "type": "slang and references (decode the reference)",
+   "lead": "Encore ABJ on \"Fillet Mignion\"",
+   "bar": [
+    "Agar JFK sa AFK tu aaj kahan se bhaag raha hai?"
+   ],
+   "prompt": "Who is \"JFK\" here?",
+   "options": [
+    {
+     "key": "A",
+     "text": "John F. Kennedy, a US President"
+    },
+    {
+     "key": "B",
+     "text": "New York's JFK airport"
+    },
+    {
+     "key": "C",
+     "text": "A gamer's username"
+    },
+    {
+     "key": "D",
+     "text": "A sneaker brand"
+    }
+   ],
+   "answer": "A",
+   "explanation": "JFK is John F. Kennedy, the US President shot dead in 1963. Encore's whole verse runs on \"dead presidents\", and \"JFK sa AFK\" means as still as JFK: dead.",
+   "songLink": "https://www.youtube.com/watch?v=vWyiYXTEX-E",
+   "pending": false,
+   "explicit": false,
+   "avoid": [
+    "DT16",
+    "DT26"
+   ]
+  }
+ ],
+ "slug": "dtth"
+}

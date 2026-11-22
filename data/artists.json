@@ -1,6 +1,17 @@
 {
  "artists": [
   {
+   "slug": "dtth",
+   "name": "Don't Try This At Home",
+   "round": "dtth-r1",
+   "count": 23,
+   "drop": {
+    "subtitle": "KR$NA × Seedhe Maut",
+    "released": "2026-11-20",
+    "until": "2026-12-14"
+   }
+  },
+  {
    "slug": "krsna",
    "name": "KR$NA",
    "round": "krsna-r1",
